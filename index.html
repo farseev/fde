@@ -3,12 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     BEFORE GOING LIVE: replace https://faithdrivensingapore.org everywhere below
+     with your real domain so social-share previews (WhatsApp,
+     Facebook, LinkedIn, X) and the canonical/SEO tags resolve.
+     The favicon, manifest and og-image files ship alongside this
+     index.html — keep them in the same folder.
+     ============================================================ -->
+
 <title>Faith Driven Singapore — You're not building alone</title>
 <meta name="description" content="Faith Driven Singapore is the local chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.">
-<meta property="og:title" content="Faith Driven Singapore — You're not building alone">
-<meta property="og:description" content="A growing community of Christ-following founders in Singapore. Gather monthly, watch founder stories, join a Foundations Group.">
+<meta name="keywords" content="Faith Driven Entrepreneur, Faith Driven Singapore, Christian entrepreneurs Singapore, faith and business, Christian founders, entrepreneur community Singapore, Foundation Course, faith driven ventures, kingdom business">
+<meta name="author" content="Faith Driven Singapore">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B0B0B">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://faithdrivensingapore.org/">
+
+<!-- Favicons & app icons -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230B0B0B'/%3E%3Cpath d='M22 15 L43 32 L22 49' fill='none' stroke='%23E0612F' stroke-width='8.4' stroke-linecap='butt' stroke-linejoin='miter'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Faith Driven SG">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0B'/%3E%3Cpath d='M11 7 L21 16 L11 25' fill='none' stroke='%23E0612F' stroke-width='4.2' stroke-linecap='butt' stroke-linejoin='miter'/%3E%3C/svg%3E">
+<meta property="og:site_name" content="Faith Driven Singapore">
+<meta property="og:title" content="Faith Driven Singapore — You're not building alone">
+<meta property="og:description" content="The Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.">
+<meta property="og:url" content="https://faithdrivensingapore.org/">
+<meta property="og:image" content="https://faithdrivensingapore.org/og-image.png">
+<meta property="og:image:secure_url" content="https://faithdrivensingapore.org/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Faith Driven Singapore — You're not building alone">
+<meta property="og:locale" content="en_SG">
+<meta property="og:locale:alternate" content="zh_SG">
+<meta property="og:locale:alternate" content="ms_SG">
+<meta property="og:locale:alternate" content="ta_SG">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Faith Driven Singapore — You're not building alone">
+<meta name="twitter:description" content="A growing community of Christ-following founders in Singapore. Gather monthly, watch founder stories, join a Foundations Group. No cost. No catch.">
+<meta name="twitter:image" content="https://faithdrivensingapore.org/og-image.png">
+<meta name="twitter:image:alt" content="Faith Driven Singapore — You're not building alone">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Oswald:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+Tamil:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -248,19 +294,20 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
 .join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,2.4vw,1.6rem);margin-top:3rem}
 .jcard{border:1px solid var(--line-light);border-radius:22px;padding:2.1rem 1.9rem;background:#fff;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s;position:relative;overflow:hidden}
 .jcard::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.jcard.j2::before{background:#25D366}
-.jcard.j3::before{background:var(--gold)}
+.jcard.j2::before{background:var(--gold)}
+.jcard.j3::before{background:var(--orange)}
 .jcard:hover{transform:translateY(-4px);box-shadow:0 22px 50px -24px rgba(20,17,14,.32)}
 .jcard:hover::before{transform:scaleX(1)}
-.jc-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;background:var(--black)}
-.jcard.j1 .jc-ic,.jcard.j2 .jc-ic{background:#25D366}
+.jc-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;background:var(--black);position:relative}
+.jcard.j2 .jc-ic{background:var(--warm-black)}
 .jcard.j3 .jc-ic{background:var(--gold)}
+/* small WhatsApp cue: tiny brand-green dot on the two WhatsApp cards, not a full green fill */
+.jcard.j1 .jc-ic::after,.jcard.j2 .jc-ic::after{content:"";position:absolute;top:9px;right:9px;width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 2px var(--black)}
+.jcard.j2 .jc-ic::after{box-shadow:0 0 0 2px var(--warm-black)}
 .jc-ic svg{width:27px;height:27px;color:#fff;fill:#fff}
 .jcard h3{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--ink);margin-bottom:.6rem}
 .jcard p{color:#615a53;font-size:.98rem;line-height:1.55;margin-bottom:1.6rem;flex:1}
 .jcard .btn{width:100%;justify-content:center}
-.jcard.j1 .btn,.jcard.j2 .btn{background:#25D366;color:#0b3d1e}
-.jcard.j1 .btn:hover,.jcard.j2 .btn:hover{background:#1eb857}
 
 /* ---------- footer ---------- */
 .footer{background:var(--true-black);color:var(--grey);padding-top:clamp(3.5rem,7vw,6rem);padding-bottom:2.5rem;border-top:1px solid var(--line-dark)}
@@ -328,6 +375,47 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
   .reveal{opacity:1;transform:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization","NGO"],
+      "@id": "https://faithdrivensingapore.org/#organization",
+      "name": "Faith Driven Singapore",
+      "alternateName": "Faith Driven Entrepreneur Singapore",
+      "url": "https://faithdrivensingapore.org/",
+      "logo": "https://faithdrivensingapore.org/favicon-512x512.png",
+      "image": "https://faithdrivensingapore.org/og-image.png",
+      "description": "Faith Driven Singapore is the local chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.",
+      "areaServed": { "@type": "Country", "name": "Singapore" },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Faith Driven Entrepreneur",
+        "url": "https://faithdrivenentrepreneur.org/"
+      },
+      "sameAs": [
+        "https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA",
+        "https://faithdrivenentrepreneur.org/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "community",
+        "url": "https://wa.me/6591227009",
+        "availableLanguage": ["English","Chinese","Malay","Tamil"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://faithdrivensingapore.org/#website",
+      "url": "https://faithdrivensingapore.org/",
+      "name": "Faith Driven Singapore",
+      "inLanguage": ["en","zh","ms","ta"],
+      "publisher": { "@id": "https://faithdrivensingapore.org/#organization" }
+    }
+  ]
+}
+</script>
 </head>
 <body id="top">
 <a href="#movement" class="skip">Skip to content</a>
@@ -389,7 +477,7 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
       <p class="lede" data-i18n="hero.sub">We're the Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders and builders. Online and in person. No cost. No catch.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg" href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="hero.cta1">Join a gathering</a>
-        <a class="btn btn-outline btn-lg" href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="hero.cta2">Join the WhatsApp community</a>
+        <a class="btn btn-outline btn-lg" href="https://chat.whatsapp.com/EJtCAix4JwJDM1nmpd4XhM" target="_blank" rel="noopener" data-i18n="hero.cta2">Join the WhatsApp community</a>
       </div>
       <div class="hero-meta">
         <span class="hm"><span class="dot"></span><span data-i18n="hero.m1">Monthly gatherings</span></span>
@@ -490,7 +578,7 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
         <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 12c-3-3-8-3-11-2v18c3-1 8-1 11 2 3-3 8-3 11-2V10c-3-1-8-1-11 2Z"/><line x1="20" y1="12" x2="20" y2="30"/></svg>
         <h3 data-i18n="serves.c4title">The Book</h3>
         <p data-i18n="serves.c4body">Get the free Faith Driven Entrepreneur ebook and video series.</p>
-        <a class="btn btn-outline card-cta" href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener" data-i18n="serves.c4cta">Get the book</a>
+        <a class="btn btn-outline card-cta" href="https://faithdrivenentrepreneur.org/books/" target="_blank" rel="noopener" data-i18n="serves.c4cta">Get the book</a>
       </article>
     </div>
   </div>
@@ -604,7 +692,7 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
         <div class="res-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-2-5.5-2-8-1v13c2.5-1 6-1 8 1 2-2 5.5-2 8-1V5c-2.5-1-6-1-8 1Z"/><line x1="12" y1="6" x2="12" y2="19"/></svg></div>
         <h3 data-i18n="resources.r2title">The FDE Book</h3>
         <p data-i18n="resources.r2body">A better way to build — where faith informs real business decisions. Free to read.</p>
-        <a class="res-link" href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener"><span data-i18n="resources.r2cta">Read the book</span><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></a>
+        <a class="res-link" href="https://faithdrivenentrepreneur.org/books/" target="_blank" rel="noopener"><span data-i18n="resources.r2cta">Read the book</span><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></a>
       </article>
       <article class="res reveal">
         <div class="res-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8.5" y1="21" x2="15.5" y2="21"/></svg></div>
@@ -638,12 +726,12 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
       </div>
       <div class="give-tiers reveal">
         <div class="tiers">
-          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>10</div><div class="per" data-i18n="give.month">per month</div></a>
-          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>30</div><div class="per" data-i18n="give.month">per month</div></a>
-          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>50</div><div class="per" data-i18n="give.month">per month</div></a>
-          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>100</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://share.somin.ai/fde-10" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>10</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://share.somin.ai/fde-30" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>30</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://share.somin.ai/fde-50" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>50</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://share.somin.ai/fde-100" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>100</div><div class="per" data-i18n="give.month">per month</div></a>
         </div>
-        <a class="btn btn-primary btn-lg" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener" data-i18n="give.cta">Give monthly</a>
+        <a class="btn btn-primary btn-lg" href="https://share.somin.ai/fde-30" target="_blank" rel="noopener" data-i18n="give.cta">Give monthly</a>
         <p class="give-note"><span data-i18n="give.note">Prefer a one-time gift or a local bank transfer?</span> <a href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="give.notelink">Get in touch.</a></p>
       </div>
     </div>
@@ -662,13 +750,13 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
         <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.9-.1 1.5Z"/></svg></div>
         <h3 data-i18n="join.c1title">Get in touch</h3>
         <p data-i18n="join.c1body">Message us on WhatsApp — we'll help you find your next step.</p>
-        <a class="btn" href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="join.c1cta">Chat on WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="join.c1cta">Chat on WhatsApp</a>
       </article>
       <article class="jcard j2 reveal">
         <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.9-.1 1.5Z"/></svg></div>
         <h3 data-i18n="join.c2title">WhatsApp community</h3>
         <p data-i18n="join.c2body">Join the group chat — prayer, encouragement, and what's on between sessions.</p>
-        <a class="btn" href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="join.c2cta">Join the group</a>
+        <a class="btn btn-outline" href="https://chat.whatsapp.com/EJtCAix4JwJDM1nmpd4XhM" target="_blank" rel="noopener" data-i18n="join.c2cta">Join the group</a>
       </article>
       <article class="jcard j3 reveal">
         <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="9" cy="7" r="4" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M19 8v6M22 11h-6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
@@ -698,14 +786,14 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
         <a href="#watch" data-i18n="nav.watch">Watch our gatherings</a>
         <a href="#resources" data-i18n="nav.resources">Resources</a>
         <a href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="footer.nextevent">Next event</a>
-        <a href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener" data-i18n="footer.freebook">Free ebook</a>
+        <a href="https://faithdrivenentrepreneur.org/books/" target="_blank" rel="noopener" data-i18n="footer.freebook">Free ebook</a>
       </div>
       <div class="foot-col">
         <h4 data-i18n="footer.connect">Connect</h4>
         <a href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp us</a>
-        <a href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="footer.community">WhatsApp community</a>
+        <a href="https://chat.whatsapp.com/EJtCAix4JwJDM1nmpd4XhM" target="_blank" rel="noopener" data-i18n="footer.community">WhatsApp community</a>
         <a href="https://share.somin.ai/fde" target="_blank" rel="noopener" data-i18n="footer.register">Register with FDE</a>
-        <a href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener" data-i18n="footer.give">Give monthly</a>
+        <a href="#give" data-i18n="footer.give">Give monthly</a>
         <div class="foot-social" aria-label="Social">
           <a href="https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.7-.5-5.4a2.8 2.8 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.6a2.8 2.8 0 0 0-2 2C1 8.3 1 12 1 12s0 3.7.5 5.4a2.8 2.8 0 0 0 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.6a2.8 2.8 0 0 0 2-2C23 15.7 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
           <a href="https://wa.me/6591227009" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.3-.2Z"/></svg></a>
