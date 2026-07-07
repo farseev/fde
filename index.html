@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Driven Singapore — You're not building alone</title>
+<meta name="description" content="Faith Driven Singapore is the local chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.">
+<meta property="og:title" content="Faith Driven Singapore — You're not building alone">
+<meta property="og:description" content="A growing community of Christ-following founders in Singapore. Gather monthly, watch founder stories, join a Foundations Group.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0B'/%3E%3Cpath d='M11 7 L21 16 L11 25' fill='none' stroke='%23E0612F' stroke-width='4.2' stroke-linecap='butt' stroke-linejoin='miter'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Oswald:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+Tamil:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0B0B0B; --true-black:#000; --warm-black:#14110E;
+  --orange:#E0612F; --orange-dark:#C2532A;
+  --gold:#BE9C60; --gold-light:#C6B488; --gold-deep:#9B865B;
+  --white:#FFFFFF; --paper:#F7F7F6; --grey:#B9B2AC; --ink:#1A1A1A;
+  --line-dark:rgba(255,255,255,.14); --line-light:rgba(20,17,14,.14);
+  --display:'Archivo','Noto Sans SC','Noto Sans Tamil',system-ui,sans-serif;
+  --label:'Oswald','Noto Sans SC','Noto Sans Tamil',system-ui,sans-serif;
+  --body:'Archivo','Noto Sans SC','Noto Sans Tamil',system-ui,sans-serif;
+  --pad-y:clamp(4.5rem,10vw,9rem);
+  --gap-side:clamp(1.25rem,5vw,3rem);
+  --maxw:1220px;
+  --radius:30px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden;font-weight:400;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--orange);color:#fff}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--orange);color:#fff;padding:.7rem 1.1rem;z-index:200;font-family:var(--label);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+.skip:focus{left:12px;top:12px}
+
+/* ---------- layout ---------- */
+.container{max-width:var(--maxw);margin:0 auto;padding-left:var(--gap-side);padding-right:var(--gap-side);width:100%}
+.section{padding-top:var(--pad-y);padding-bottom:var(--pad-y);position:relative}
+.s-dark{background:var(--black);color:var(--white)}
+.s-black{background:var(--true-black);color:var(--white)}
+.s-paper{background:var(--paper);color:var(--ink)}
+
+/* ---------- type ---------- */
+.eyebrow{font-family:var(--label);text-transform:uppercase;letter-spacing:.2em;font-weight:600;color:var(--gold);font-size:clamp(.72rem,1.3vw,.84rem);display:inline-block;margin-bottom:1.2rem;line-height:1.4}
+.display{font-family:var(--display);font-weight:900;line-height:1.04;letter-spacing:-.015em;font-size:clamp(2rem,4.6vw,3.5rem)}
+.display em{font-style:italic;color:var(--orange);font-weight:900}
+html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
+.display-xl{font-size:clamp(2.7rem,7.2vw,5.6rem);line-height:1.0;letter-spacing:-.02em}
+.lede{font-size:clamp(1.05rem,1.7vw,1.28rem);line-height:1.62;color:var(--grey);max-width:42ch}
+.s-paper .lede{color:#5a534d}
+.body-lg{font-size:clamp(1.02rem,1.5vw,1.16rem);line-height:1.65}
+.muted{color:var(--grey)}
+.s-paper .muted{color:#6b645d}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--label);text-transform:uppercase;letter-spacing:.13em;font-weight:600;font-size:clamp(.78rem,1.1vw,.88rem);padding:1.05em 1.7em;border-radius:6px;transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease;line-height:1;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-dark)}
+.btn-outline{background:transparent;color:#fff;border:1.6px solid rgba(255,255,255,.55)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+.s-paper .btn-outline{color:var(--ink);border-color:rgba(20,17,14,.35)}
+.s-paper .btn-outline:hover{border-color:var(--ink);background:rgba(20,17,14,.05)}
+.btn .chev{width:.72em;height:.9em;flex:none}
+.btn .chev path{fill:none;stroke:currentColor;stroke-width:5.5;stroke-linejoin:miter}
+.btn-lg{padding:1.2em 2em}
+
+/* chevron device */
+.chevron{display:inline-block}
+.chevron path{fill:none;stroke:currentColor;stroke-width:5;stroke-linejoin:miter;stroke-linecap:butt}
+
+/* ---------- wordmark ---------- */
+.wordmark{display:inline-flex;flex-direction:column;gap:.16em;line-height:1;color:#fff}
+.wm-l1{font-family:var(--label);font-weight:700;letter-spacing:.015em;font-size:1.32rem;display:inline-flex;align-items:center;line-height:1}
+.wm-chev{width:.6em;height:.86em;margin:0 .02em;color:var(--orange)}
+.wm-chev path{fill:none;stroke:currentColor;stroke-width:5.4;stroke-linejoin:miter;stroke-linecap:butt}
+.wm-l2{font-family:var(--label);font-weight:500;letter-spacing:.42em;font-size:.52rem;padding-top:.42em;border-top:1.6px solid currentColor;text-indent:.42em;color:#fff}
+.wordmark.gold .wm-chev{color:#fff}
+.wordmark.gold .wm-l2{color:var(--gold);border-color:var(--gold)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:100;background:rgba(11,11,11,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:border-color .3s,background .3s;border-bottom:1px solid transparent}
+.nav.scrolled{border-bottom-color:var(--line-dark);background:rgba(8,8,8,.9)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:.85rem var(--gap-side);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-links{display:flex;align-items:center;gap:1.6rem}
+.nav-link{font-family:var(--label);text-transform:uppercase;letter-spacing:.11em;font-weight:500;font-size:.83rem;color:rgba(255,255,255,.82);transition:color .18s;position:relative;padding:.3rem 0}
+.nav-link:hover{color:#fff}
+.nav-link::after{content:"";position:absolute;left:0;bottom:-2px;height:1.5px;width:0;background:var(--orange);transition:width .22s}
+.nav-link:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:1.1rem}
+.lang{display:flex;align-items:center;gap:.1rem;border:1px solid var(--line-dark);border-radius:999px;padding:.2rem;background:rgba(255,255,255,.03)}
+.lang button{font-family:var(--label);text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;font-weight:500;color:rgba(255,255,255,.6);padding:.34rem .56rem;border-radius:999px;transition:.16s;line-height:1}
+.lang button:hover{color:#fff}
+.lang button.active{background:var(--orange);color:#fff}
+.nav-cta{display:inline-flex}
+.hamburger{display:none;width:44px;height:44px;border:1px solid var(--line-dark);border-radius:8px;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:rgba(255,255,255,.03)}
+.hamburger span{display:block;width:20px;height:2px;background:#fff;transition:.25s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;background:var(--black);z-index:99;transform:translateX(100%);transition:transform .34s cubic-bezier(.5,0,.2,1);display:flex;flex-direction:column;padding:5.5rem var(--gap-side) 2.5rem;overflow-y:auto;visibility:hidden}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mobile-menu a.m-link{font-family:var(--display);font-weight:800;font-size:2rem;padding:.55rem 0;border-bottom:1px solid var(--line-dark);color:#fff;display:flex;align-items:center;gap:.6rem}
+.mobile-menu a.m-link .chevron{width:.5em;height:.7em;color:var(--orange)}
+.m-lang{display:flex;gap:.5rem;margin-top:2rem;flex-wrap:wrap}
+.m-lang button{font-family:var(--label);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:rgba(255,255,255,.7);border:1px solid var(--line-dark);border-radius:999px;padding:.6rem 1rem}
+.m-lang button.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+.m-cta{margin-top:2rem}
+.m-cta .btn{width:100%;justify-content:center}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:clamp(600px,92vh,940px);display:flex;align-items:center;overflow:hidden;background:var(--black)}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 28%;z-index:0}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.62) 0%,rgba(11,11,11,.72) 45%,rgba(11,11,11,.97) 100%),linear-gradient(96deg,rgba(11,11,11,.9) 8%,rgba(11,11,11,.35) 62%,rgba(11,11,11,.15) 100%)}
+.hero .container{position:relative;z-index:2;padding-top:4rem;padding-bottom:4rem}
+.hero-in{max-width:830px}
+.hero h1{margin:.2rem 0 1.6rem}
+.hero .lede{max-width:52ch;color:#e9e4df}
+.hero-ctas{display:flex;gap:1rem;margin-top:2.4rem;flex-wrap:wrap}
+.hero-meta{display:flex;gap:2rem;margin-top:3rem;flex-wrap:wrap;align-items:center}
+.hero-meta .hm{display:flex;align-items:center;gap:.6rem;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--grey)}
+.hero-meta .dot{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;box-shadow:0 0 0 4px rgba(224,97,47,.18)}
+.scrolldown{position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--grey);font-family:var(--label);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem}
+.scrolldown .chevron{width:14px;height:20px;transform:rotate(90deg);color:var(--gold);animation:bob 1.9s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:rotate(90deg) translateX(0)}50%{transform:rotate(90deg) translateX(5px)}}
+
+/* angular divider */
+.angle-top{clip-path:polygon(0 3.2vw,100% 0,100% 100%,0 100%)}
+.angle-top-r{clip-path:polygon(0 0,100% 3.2vw,100% 100%,0 100%)}
+
+/* ---------- section heading block ---------- */
+.head-block{max-width:60ch}
+.head-block.center{margin:0 auto;text-align:center}
+.head-block .lede{margin-top:1.4rem}
+.head-block.center .lede{margin-left:auto;margin-right:auto}
+
+/* ---------- movement split ---------- */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.movement-body p{margin-bottom:1.3rem}
+.movement-body p:last-child{margin-bottom:0}
+.pull{border-left:3px solid var(--orange);padding-left:1.3rem;margin:2rem 0;font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.3vw,1.7rem);line-height:1.25;color:var(--ink)}
+.venue-strip{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.2rem}
+.venue-chip{font-family:var(--label);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:500;color:#6b645d;border:1px solid var(--line-light);border-radius:999px;padding:.5rem .9rem;background:#fff}
+.movement-photo{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:#ddd}
+.movement-photo img{width:100%;height:100%;object-fit:cover}
+.movement-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,11,11,.5))}
+.mp-tag{position:absolute;left:1.1rem;bottom:1.1rem;z-index:2;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:#fff;background:rgba(11,11,11,.55);backdrop-filter:blur(4px);padding:.5rem .85rem;border-radius:8px}
+
+/* ---------- stats ---------- */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin:2.5rem 0 3.4rem;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:2.8rem 0}
+.stat .num{font-family:var(--display);font-weight:900;font-size:clamp(2.8rem,8vw,5.6rem);line-height:.95;letter-spacing:-.03em;color:var(--gold)}
+.stat.punch .num{color:var(--orange)}
+.stat .cap{font-family:var(--label);text-transform:uppercase;letter-spacing:.11em;font-size:clamp(.72rem,1.2vw,.82rem);color:var(--grey);margin-top:.9rem;line-height:1.4}
+.stat-punch{max-width:30ch}
+.stat-punch .display{font-size:clamp(1.6rem,3.4vw,2.7rem)}
+.stat-punch .btn{margin-top:2rem}
+
+/* ---------- serves grid (gradient cards) ---------- */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.1rem,2.2vw,1.6rem);margin-top:3rem}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:400px;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;color:#fff;isolation:isolate}
+.card .card-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.card .card-grad{position:absolute;inset:0;z-index:-1}
+.card.orange .card-grad{background:linear-gradient(178deg,var(--orange) 0%,var(--orange-dark) 34%,rgba(20,17,14,.72) 74%,var(--warm-black) 100%)}
+.card.gold .card-grad{background:linear-gradient(178deg,var(--gold) 0%,var(--gold-deep) 34%,rgba(20,17,14,.74) 74%,var(--warm-black) 100%)}
+.card-num{position:absolute;top:1.6rem;left:2rem;font-family:var(--label);font-weight:600;letter-spacing:.14em;font-size:.82rem;color:rgba(255,255,255,.85)}
+.card-icon{position:absolute;top:1.5rem;right:1.8rem;width:38px;height:38px;color:#fff;opacity:.92}
+.card-icon path,.card-icon circle,.card-icon line,.card-icon rect{fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,3vw,2.1rem);line-height:1.05;margin-bottom:.7rem;letter-spacing:-.01em}
+.card p{color:rgba(255,255,255,.9);font-size:1rem;line-height:1.55;max-width:34ch;margin-bottom:1.5rem}
+.card .card-cta{align-self:flex-start;margin-top:auto}
+
+/* ---------- watch / videos ---------- */
+.featured-wrap{margin-top:3rem;display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(1.4rem,3vw,2.4rem);align-items:center}
+.video{position:relative;border-radius:20px;overflow:hidden;background:#111;aspect-ratio:16/9;cursor:pointer;border:1px solid var(--line-dark)}
+.video .thumb{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease,filter .3s}
+.video:hover .thumb{transform:scale(1.05)}
+.video::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,11,11,.1),rgba(11,11,11,.55));transition:opacity .3s}
+.video .play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:clamp(58px,9vw,84px);height:clamp(58px,9vw,84px);border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;transition:transform .22s ease,background .22s;box-shadow:0 10px 34px rgba(224,97,47,.4)}
+.video:hover .play{transform:translate(-50%,-50%) scale(1.08);background:var(--orange-dark)}
+.video .play .chevron{width:34%;height:44%;color:#fff;margin-left:9%}
+.video .play .chevron path{stroke-width:5.5;fill:#fff;stroke:#fff}
+.video .vlabel{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:1.4rem 1.4rem 1.2rem;display:flex;flex-direction:column;gap:.25rem}
+.video .vlabel .vk{font-family:var(--label);text-transform:uppercase;letter-spacing:.13em;font-size:.68rem;color:var(--gold)}
+.video .vlabel .vt{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.7vw,1.3rem);line-height:1.12;color:#fff}
+.video.is-playing::before,.video.is-playing .play,.video.is-playing .vlabel,.video.is-playing .thumb{opacity:0;pointer-events:none}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+.featured-copy .eyebrow{margin-bottom:.9rem}
+.featured-copy h3{font-family:var(--display);font-weight:900;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.1;margin-bottom:.9rem}
+.featured-copy p{color:var(--grey);margin-bottom:1.5rem;max-width:38ch}
+
+.video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.9rem,1.8vw,1.4rem);margin-top:2.4rem}
+.vcard{cursor:pointer}
+.vcard .video{aspect-ratio:16/9;border-radius:14px}
+.vcard .play{width:clamp(42px,6vw,56px);height:clamp(42px,6vw,56px)}
+.vcard-meta{margin-top:.85rem}
+.vcard-meta .vk{font-family:var(--label);text-transform:uppercase;letter-spacing:.11em;font-size:.68rem;color:var(--gold)}
+.vcard-meta .vt{font-weight:600;font-size:.98rem;line-height:1.25;margin-top:.2rem;color:#fff}
+.vcard-meta .vv{font-size:.82rem;color:var(--grey);margin-top:.15rem}
+.watch-foot{display:flex;justify-content:center;margin-top:3rem}
+
+/* ---------- resources ---------- */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,2.4vw,1.8rem);margin-top:3rem}
+.res{background:#fff;border:1px solid var(--line-light);border-radius:22px;padding:2rem 1.8rem;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease;position:relative;overflow:hidden}
+.res:hover{transform:translateY(-4px);box-shadow:0 22px 50px -24px rgba(20,17,14,.35)}
+.res-ic{width:46px;height:46px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem}
+.res.rgold .res-ic{background:var(--gold)}
+.res-ic svg{width:24px;height:24px;color:#fff}
+.res-ic svg path,.res-ic svg circle,.res-ic svg rect,.res-ic svg line,.res-ic svg polygon{fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.res h3{font-family:var(--display);font-weight:800;font-size:1.3rem;margin-bottom:.6rem;color:var(--ink)}
+.res p{color:#615a53;font-size:.98rem;line-height:1.55;margin-bottom:1.5rem;flex:1}
+.res-link{align-self:flex-start;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;font-weight:600;color:var(--orange);display:inline-flex;align-items:center;gap:.5rem;transition:gap .2s}
+.res-link:hover{gap:.85rem}
+.res-link .chevron{width:.7em;height:.85em}
+.res-link .chevron path{stroke:var(--orange)}
+
+/* ---------- event band ---------- */
+.event-band{position:relative;overflow:hidden;background:var(--true-black)}
+.event-band .eb-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.34;z-index:0}
+.event-band .eb-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55))}
+.event-band .container{position:relative;z-index:2;text-align:center;max-width:800px}
+.event-band .display{margin:0 auto 1.4rem}
+.event-band .lede{margin:0 auto 2.4rem;color:#e9e4df}
+.eb-date{font-family:var(--label);text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-size:.85rem;margin-bottom:1.3rem;display:inline-flex;align-items:center;gap:.6rem}
+.eb-date .dot{width:7px;height:7px;border-radius:50%;background:var(--orange)}
+
+/* ---------- give ---------- */
+.give-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.4rem,5vw,5rem);align-items:center}
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.8rem}
+.tier{border:1px solid var(--line-dark);border-radius:16px;padding:1.5rem 1.4rem;background:rgba(255,255,255,.02);transition:.2s;display:block}
+.tier:hover{border-color:var(--orange);background:rgba(224,97,47,.07);transform:translateY(-3px)}
+.tier .amt{font-family:var(--display);font-weight:900;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1;color:#fff}
+.tier .amt .cur{font-size:.5em;vertical-align:.35em;color:var(--gold);font-weight:700}
+.tier .per{font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--grey);margin-top:.5rem}
+.tier:nth-child(3) .amt,.tier:nth-child(4) .amt{color:#fff}
+.give-note{font-size:.92rem;color:var(--grey);margin-top:1.5rem}
+.give-note a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.give-copy .display{margin-bottom:1.4rem}
+
+/* ---------- join ---------- */
+.join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,2.4vw,1.6rem);margin-top:3rem}
+.jcard{border:1px solid var(--line-light);border-radius:22px;padding:2.1rem 1.9rem;background:#fff;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s;position:relative;overflow:hidden}
+.jcard::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.jcard.j2::before{background:#25D366}
+.jcard.j3::before{background:var(--gold)}
+.jcard:hover{transform:translateY(-4px);box-shadow:0 22px 50px -24px rgba(20,17,14,.32)}
+.jcard:hover::before{transform:scaleX(1)}
+.jc-ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;background:var(--black)}
+.jcard.j1 .jc-ic,.jcard.j2 .jc-ic{background:#25D366}
+.jcard.j3 .jc-ic{background:var(--gold)}
+.jc-ic svg{width:27px;height:27px;color:#fff;fill:#fff}
+.jcard h3{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--ink);margin-bottom:.6rem}
+.jcard p{color:#615a53;font-size:.98rem;line-height:1.55;margin-bottom:1.6rem;flex:1}
+.jcard .btn{width:100%;justify-content:center}
+.jcard.j1 .btn,.jcard.j2 .btn{background:#25D366;color:#0b3d1e}
+.jcard.j1 .btn:hover,.jcard.j2 .btn:hover{background:#1eb857}
+
+/* ---------- footer ---------- */
+.footer{background:var(--true-black);color:var(--grey);padding-top:clamp(3.5rem,7vw,6rem);padding-bottom:2.5rem;border-top:1px solid var(--line-dark)}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);padding-bottom:3rem;border-bottom:1px solid var(--line-dark)}
+.foot-about{max-width:38ch}
+.foot-tag{font-family:var(--display);font-weight:900;font-size:clamp(1.4rem,2.6vw,2rem);color:#fff;line-height:1.1;margin:1.6rem 0 1.1rem}
+.foot-about p{font-size:.92rem;line-height:1.6}
+.foot-about a.inline{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+.foot-col h4{font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;color:var(--grey);margin-bottom:1.2rem;font-weight:600}
+.foot-col a{display:block;color:rgba(255,255,255,.82);font-size:.95rem;padding:.4rem 0;transition:color .16s}
+.foot-col a:hover{color:var(--orange)}
+.foot-social{display:flex;gap:.7rem;margin-top:.4rem}
+.foot-social a{width:42px;height:42px;border:1px solid var(--line-dark);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;transition:.18s}
+.foot-social a:hover{background:var(--orange);border-color:var(--orange)}
+.foot-social svg{width:20px;height:20px;fill:currentColor}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:2rem;flex-wrap:wrap}
+.foot-bottom p{font-size:.82rem}
+.foot-lang{display:flex;gap:.4rem}
+.foot-lang button{font-family:var(--label);text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;color:var(--grey);border:1px solid var(--line-dark);border-radius:999px;padding:.35rem .7rem;transition:.16s}
+.foot-lang button.active,.foot-lang button:hover{color:#fff;border-color:var(--orange)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav-links{gap:1.15rem}
+  .nav-link{font-size:.78rem}
+  .video-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .nav-links,.nav .lang,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .split{grid-template-columns:1fr;gap:2.5rem}
+  .movement-photo{aspect-ratio:16/11;order:-1}
+  .stat-grid{grid-template-columns:1fr;gap:2rem;text-align:left}
+  .stat .num{font-size:clamp(3.4rem,16vw,5rem)}
+  .cards{grid-template-columns:1fr}
+  .card{min-height:340px}
+  .featured-wrap{grid-template-columns:1fr;gap:1.6rem}
+  .res-grid,.join-grid{grid-template-columns:1fr}
+  .give-grid{grid-template-columns:1fr;gap:2.4rem}
+  .give-copy{order:-1}
+  .foot-top{grid-template-columns:1fr 1fr;gap:2.2rem}
+  .foot-about{grid-column:1/-1}
+}
+@media (max-width:560px){
+  :root{--radius:22px}
+  .hero{min-height:88vh}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{justify-content:center}
+  .hero-meta{gap:1rem 1.4rem;margin-top:2.2rem}
+  .video-grid{grid-template-columns:1fr 1fr;gap:.7rem}
+  .vcard-meta .vt{font-size:.85rem}
+  .vcard-meta .vv{font-size:.74rem}
+  .tiers{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;align-items:flex-start}
+  .btn{width:auto}
+  .card p{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a href="#movement" class="skip">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="#top" aria-label="Faith Driven Singapore — home">
+      <span class="wm-l1">FAITH&nbsp;DRI<svg class="wm-chev" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg>EN</span>
+      <span class="wm-l2">SINGAPORE</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-link" href="#movement" data-i18n="nav.about">About</a>
+      <a class="nav-link" href="#serves" data-i18n="nav.serves">The Chapter</a>
+      <a class="nav-link" href="#watch" data-i18n="nav.watch">Watch</a>
+      <a class="nav-link" href="#resources" data-i18n="nav.resources">Resources</a>
+      <a class="nav-link" href="#join" data-i18n="nav.join">Join</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="zh" lang="zh">中文</button>
+        <button data-lang="ms" lang="ms">BM</button>
+        <button data-lang="ta" lang="ta">தமிழ்</button>
+      </div>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="nav.getintouch">Get in touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a class="m-link" href="#movement"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg><span data-i18n="nav.about">About</span></a>
+  <a class="m-link" href="#serves"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg><span data-i18n="nav.serves">The Chapter</span></a>
+  <a class="m-link" href="#watch"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg><span data-i18n="nav.watch">Watch</span></a>
+  <a class="m-link" href="#resources"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg><span data-i18n="nav.resources">Resources</span></a>
+  <a class="m-link" href="#join"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg><span data-i18n="nav.join">Join</span></a>
+  <div class="m-lang" role="group" aria-label="Language">
+    <button data-lang="en" class="active">English</button>
+    <button data-lang="zh" lang="zh">中文</button>
+    <button data-lang="ms" lang="ms">Bahasa Melayu</button>
+    <button data-lang="ta" lang="ta">தமிழ்</button>
+  </div>
+  <div class="m-cta">
+    <a class="btn btn-primary" href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="nav.getintouch">Get in touch</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Intro">
+  <div class="hero-bg" style="background-image:url('https://i.ytimg.com/vi/6a5W5w2hQ54/maxresdefault.jpg')"></div>
+  <div class="container">
+    <div class="hero-in">
+      <span class="eyebrow">Faith Driven Entrepreneur · Singapore</span>
+      <h1 class="display display-xl" data-i18n="hero.headline">You weren't meant to build <em>alone</em>.</h1>
+      <p class="lede" data-i18n="hero.sub">We're the Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders and builders. Online and in person. No cost. No catch.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="hero.cta1">Join a gathering</a>
+        <a class="btn btn-outline btn-lg" href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="hero.cta2">Join the WhatsApp community</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m1">Monthly gatherings</span></span>
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m2">Online &amp; in person</span></span>
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m3">No cost. No catch.</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="scrolldown" aria-hidden="true">
+    <span data-i18n="hero.scroll">Scroll</span>
+    <svg class="chevron" viewBox="0 0 24 32"><path d="M5 3.5 L19 16 L5 28.5"/></svg>
+  </div>
+</section>
+
+<!-- MOVEMENT -->
+<section class="section s-paper angle-top" id="movement">
+  <div class="container">
+    <div class="split">
+      <div class="movement-body reveal">
+        <span class="eyebrow" data-i18n="movement.eyebrow">Why we gather</span>
+        <h2 class="display" data-i18n="movement.headline">This movement is <em>yours</em>.</h2>
+        <p class="body-lg" style="margin-top:1.6rem" data-i18n="movement.p1">God gave you ideas, dreams and ventures to reflect His image. Faith driven ventures bring order out of chaos, solve problems, and create dignity. You weren't meant to build alone — and here in Singapore, you don't have to.</p>
+        <p class="pull" data-i18n="movement.pull">You need allies. We have groups.</p>
+        <p class="body-lg" data-i18n="movement.p2">From Browzwear to City Harvest, from Endowus to Block71, we gather founders across the island once a month — to worship, to learn from entrepreneurs who've done the work, and to walk the journey together.</p>
+        <div class="venue-strip" aria-label="Where we've gathered">
+          <span class="venue-chip">Browzwear</span>
+          <span class="venue-chip">City Harvest</span>
+          <span class="venue-chip">Endowus</span>
+          <span class="venue-chip">Nautique</span>
+          <span class="venue-chip">Block71</span>
+        </div>
+      </div>
+      <div class="movement-photo reveal">
+        <img src="https://i.ytimg.com/vi/Hmq7PztBWMA/maxresdefault.jpg" alt="Faith Driven Singapore founders gathered around a table at Browzwear" loading="lazy">
+        <span class="mp-tag" data-i18n="movement.phototag">A gathering · Browzwear, Singapore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section s-black" aria-label="The opportunity">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="stats.eyebrow">The opportunity</span>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat"><div class="num">582M</div><div class="cap" data-i18n="stats.s1label">Entrepreneurs worldwide</div></div>
+      <div class="stat"><div class="num">180M</div><div class="cap" data-i18n="stats.s2label">are Christ-following</div></div>
+      <div class="stat punch"><div class="num">99.7%</div><div class="cap" data-i18n="stats.s3label">are building alone</div></div>
+    </div>
+    <div class="stat-punch reveal">
+      <h2 class="display" data-i18n="stats.punch">That's <em>99.7%</em> building without a community. In Singapore, we're changing that — one gathering, one founder, one story at a time.</h2>
+      <a class="btn btn-primary" href="https://share.somin.ai/fde" target="_blank" rel="noopener" data-i18n="stats.cta">Find your people</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVES / CARDS -->
+<section class="section s-dark" id="serves">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="serves.eyebrow">How Faith Driven Singapore serves you</span>
+      <h2 class="display" data-i18n="serves.headline">Four ways in.</h2>
+    </div>
+    <div class="cards">
+      <article class="card orange reveal">
+        <div class="card-bg" style="background-image:url('https://i.ytimg.com/vi/u2o0DJFPZJ4/maxresdefault.jpg')"></div>
+        <div class="card-grad"></div>
+        <span class="card-num">01</span>
+        <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="15" r="5"/><circle cx="27" cy="17" r="4"/><path d="M6 32c0-5 4-8 8-8s8 3 8 8"/><path d="M22 30c.6-3.5 3.4-6 7-6 3.2 0 5.6 2 6 5"/></svg>
+        <h3 data-i18n="serves.c1title">Community</h3>
+        <p data-i18n="serves.c1body">Join a Foundations Group — 10 to 15 entrepreneurs, eight weeks, online or in person.</p>
+        <a class="btn btn-outline card-cta" href="https://share.somin.ai/fde" target="_blank" rel="noopener" data-i18n="serves.c1cta">Register with FDE</a>
+      </article>
+      <article class="card gold reveal">
+        <div class="card-bg" style="background-image:url('https://i.ytimg.com/vi/mGUM0Li2be0/maxresdefault.jpg')"></div>
+        <div class="card-grad"></div>
+        <span class="card-num">02</span>
+        <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="9" width="28" height="20" rx="3"/><path d="M17 15.5 L24 19 L17 22.5 Z" fill="#fff" stroke="#fff"/><line x1="14" y1="34" x2="26" y2="34"/></svg>
+        <h3 data-i18n="serves.c2title">Content</h3>
+        <p data-i18n="serves.c2body">Watch founder stories on YouTube and listen to the weekly podcast.</p>
+        <a class="btn btn-outline card-cta" href="https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA" target="_blank" rel="noopener" data-i18n="serves.c2cta">Watch &amp; listen</a>
+      </article>
+      <article class="card gold reveal">
+        <div class="card-bg" style="background-image:url('https://i.ytimg.com/vi/6a5W5w2hQ54/maxresdefault.jpg')"></div>
+        <div class="card-grad"></div>
+        <span class="card-num">03</span>
+        <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="10" width="26" height="23" rx="3"/><line x1="7" y1="17" x2="33" y2="17"/><line x1="14" y1="7" x2="14" y2="13"/><line x1="26" y1="7" x2="26" y2="13"/><circle cx="20" cy="25" r="2.4" fill="#fff"/></svg>
+        <h3 data-i18n="serves.c3title">Gatherings</h3>
+        <p data-i18n="serves.c3body">We meet monthly across Singapore. See what's coming next.</p>
+        <a class="btn btn-outline card-cta" href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="serves.c3cta">See the next event</a>
+      </article>
+      <article class="card orange reveal">
+        <div class="card-bg" style="background-image:url('https://i.ytimg.com/vi/1Z09O9_AUpk/maxresdefault.jpg')"></div>
+        <div class="card-grad"></div>
+        <span class="card-num">04</span>
+        <svg class="card-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 12c-3-3-8-3-11-2v18c3-1 8-1 11 2 3-3 8-3 11-2V10c-3-1-8-1-11 2Z"/><line x1="20" y1="12" x2="20" y2="30"/></svg>
+        <h3 data-i18n="serves.c4title">The Book</h3>
+        <p data-i18n="serves.c4body">Get the free Faith Driven Entrepreneur ebook and video series.</p>
+        <a class="btn btn-outline card-cta" href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener" data-i18n="serves.c4cta">Get the book</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WATCH -->
+<section class="section s-black" id="watch">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="watch.eyebrow">From our gatherings</span>
+      <h2 class="display" data-i18n="watch.headline">Real founders. Real rooms. <em>Real</em> stories.</h2>
+      <p class="lede" data-i18n="watch.sub">Recorded at gatherings across Singapore — our eight-session journey through what it means to be a Faith Driven Entrepreneur. Press play.</p>
+    </div>
+
+    <div class="featured-wrap">
+      <div class="video reveal" data-id="-RS4ljdKMQM" role="button" tabindex="0" aria-label="Play: Praxis Gathering Singapore">
+        <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/-RS4ljdKMQM/maxresdefault.jpg')"></div>
+        <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        <div class="vlabel">
+          <span class="vk"><span data-i18n="watch.featured">Featured</span> · Block71 · Mar 2025</span>
+          <span class="vt">Praxis Gathering · Singapore</span>
+        </div>
+      </div>
+      <div class="featured-copy reveal">
+        <span class="eyebrow" data-i18n="watch.featured">Featured</span>
+        <h3 data-i18n="watch.fh">When founders gather, something shifts.</h3>
+        <p data-i18n="watch.fp">Three days, one room, and a city's worth of builders wrestling with the same questions you are. This is what the movement looks like in Singapore.</p>
+        <a class="btn btn-outline" href="https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA" target="_blank" rel="noopener" data-i18n="watch.ytcta">Watch on YouTube</a>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div class="vcard reveal">
+        <div class="video" data-id="Hmq7PztBWMA" role="button" tabindex="0" aria-label="Play Session 1: Our Call to Create">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/Hmq7PztBWMA/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 01</span><div class="vt">Our Call to Create</div><div class="vv">Browzwear</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="yD01eWljnTw" role="button" tabindex="0" aria-label="Play Session 2: God Owns My Business">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/yD01eWljnTw/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 02</span><div class="vt">God Owns My Business</div><div class="vv">with Phil Vischer</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="mGUM0Li2be0" role="button" tabindex="0" aria-label="Play Session 3: Don't Worship Work">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/mGUM0Li2be0/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 03</span><div class="vt">Don't Worship Work</div><div class="vv">Nautique Boats</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="ninj5Pg2sDY" role="button" tabindex="0" aria-label="Play Session 4: Excellence Matters">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/ninj5Pg2sDY/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 04</span><div class="vt">Excellence Matters</div><div class="vv" data-i18n="watch.sgchapter">Singapore chapter</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="1Z09O9_AUpk" role="button" tabindex="0" aria-label="Play Session 5: Faithful vs. Willful">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/1Z09O9_AUpk/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 05</span><div class="vt">Faithful vs. Willful</div><div class="vv" data-i18n="watch.sgchapter">Singapore chapter</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="sLsN2GXkNUU" role="button" tabindex="0" aria-label="Play Session 6: Ministry in Word">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/sLsN2GXkNUU/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 06</span><div class="vt">Ministry in Word</div><div class="vv">City Harvest</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="6a5W5w2hQ54" role="button" tabindex="0" aria-label="Play Session 7: Ministry in Deed">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/6a5W5w2hQ54/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 07</span><div class="vt">Ministry in Deed</div><div class="vv">City Harvest</div></div>
+      </div>
+      <div class="vcard reveal">
+        <div class="video" data-id="u2o0DJFPZJ4" role="button" tabindex="0" aria-label="Play Session 8: Global Movement">
+          <div class="thumb" style="background-image:url('https://i.ytimg.com/vi/u2o0DJFPZJ4/hqdefault.jpg')"></div>
+          <div class="play"><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></div>
+        </div>
+        <div class="vcard-meta"><span class="vk"><span data-i18n="label.session">Session</span> 08</span><div class="vt">Global Movement</div><div class="vv" data-i18n="watch.sgchapter">Singapore chapter</div></div>
+      </div>
+    </div>
+    <div class="watch-foot">
+      <a class="btn btn-primary" href="https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA" target="_blank" rel="noopener"><svg class="chev" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg><span data-i18n="watch.ytcta">Watch on YouTube</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section s-paper" id="resources">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="resources.eyebrow">Keep going between sessions</span>
+      <h2 class="display" data-i18n="resources.headline">Resources for the journey.</h2>
+    </div>
+    <div class="res-grid">
+      <article class="res reveal">
+        <div class="res-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9.5 L15 12 L10 14.5 Z" fill="#fff" stroke="#fff"/></svg></div>
+        <h3 data-i18n="resources.r1title">The Foundation Course</h3>
+        <p data-i18n="resources.r1body">Our flagship eight-session video series with J.D. Greear and Henry Kaestner. No cost. No catch.</p>
+        <a class="res-link" href="https://faithdrivenentrepreneur.org/foundation-course/" target="_blank" rel="noopener"><span data-i18n="resources.r1cta">Explore the course</span><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></a>
+      </article>
+      <article class="res rgold reveal">
+        <div class="res-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-2-5.5-2-8-1v13c2.5-1 6-1 8 1 2-2 5.5-2 8-1V5c-2.5-1-6-1-8 1Z"/><line x1="12" y1="6" x2="12" y2="19"/></svg></div>
+        <h3 data-i18n="resources.r2title">The FDE Book</h3>
+        <p data-i18n="resources.r2body">A better way to build — where faith informs real business decisions. Free to read.</p>
+        <a class="res-link" href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener"><span data-i18n="resources.r2cta">Read the book</span><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></a>
+      </article>
+      <article class="res reveal">
+        <div class="res-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 11a6 6 0 0 0 12 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8.5" y1="21" x2="15.5" y2="21"/></svg></div>
+        <h3 data-i18n="resources.r3title">The Podcast</h3>
+        <p data-i18n="resources.r3body">For the faithful disruptors called to create. New conversations every week.</p>
+        <a class="res-link" href="https://faithdrivenentrepreneur.org/podcast/" target="_blank" rel="noopener"><span data-i18n="resources.r3cta">Listen now</span><svg class="chevron" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT BAND -->
+<section class="section event-band" id="event">
+  <div class="eb-bg" style="background-image:url('https://i.ytimg.com/vi/sLsN2GXkNUU/maxresdefault.jpg')"></div>
+  <div class="container">
+    <span class="eb-date"><span class="dot"></span><span data-i18n="event.eyebrow">Next session · Save the date</span></span>
+    <h2 class="display display-xl" data-i18n="event.headline">Come to the next <em>gathering</em>.</h2>
+    <p class="lede" data-i18n="event.sub">Worship, a founder story, and honest conversation with people who get it. Whether you're just starting or scaling up — you're welcome.</p>
+    <a class="btn btn-primary btn-lg" href="https://share.somin.ai/event-fde" target="_blank" rel="noopener"><svg class="chev" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg><span data-i18n="event.cta">Register on Eventbrite</span></a>
+  </div>
+</section>
+
+<!-- GIVE -->
+<section class="section s-dark" id="give">
+  <div class="container">
+    <div class="give-grid">
+      <div class="give-copy reveal">
+        <span class="eyebrow" data-i18n="give.eyebrow">Partner with us</span>
+        <h2 class="display" data-i18n="give.headline">Become a monthly <em>partner</em>.</h2>
+        <p class="body-lg muted" data-i18n="give.body">Your monthly gift empowers our volunteers — funding the food, venue and essentials to host Singapore's largest ongoing community of Faith Driven Entrepreneurs.</p>
+      </div>
+      <div class="give-tiers reveal">
+        <div class="tiers">
+          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>10</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>30</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>50</div><div class="per" data-i18n="give.month">per month</div></a>
+          <a class="tier" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener"><div class="amt"><span class="cur">$</span>100</div><div class="per" data-i18n="give.month">per month</div></a>
+        </div>
+        <a class="btn btn-primary btn-lg" href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener" data-i18n="give.cta">Give monthly</a>
+        <p class="give-note"><span data-i18n="give.note">Prefer a one-time gift or a local bank transfer?</span> <a href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="give.notelink">Get in touch.</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="section s-paper angle-top" id="join">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="join.eyebrow">Get connected</span>
+      <h2 class="display" data-i18n="join.headline">Three ways to join us.</h2>
+    </div>
+    <div class="join-grid">
+      <article class="jcard j1 reveal">
+        <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.9-.1 1.5Z"/></svg></div>
+        <h3 data-i18n="join.c1title">Get in touch</h3>
+        <p data-i18n="join.c1body">Message us on WhatsApp — we'll help you find your next step.</p>
+        <a class="btn" href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="join.c1cta">Chat on WhatsApp</a>
+      </article>
+      <article class="jcard j2 reveal">
+        <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5c-.1.2-.3.3-.1.6.1.2.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.3.1.9-.1 1.5Z"/></svg></div>
+        <h3 data-i18n="join.c2title">WhatsApp community</h3>
+        <p data-i18n="join.c2body">Join the group chat — prayer, encouragement, and what's on between sessions.</p>
+        <a class="btn" href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="join.c2cta">Join the group</a>
+      </article>
+      <article class="jcard j3 reveal">
+        <div class="jc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="9" cy="7" r="4" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M19 8v6M22 11h-6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="join.c3title">Register with FDE</h3>
+        <p data-i18n="join.c3body">Register on the global FDE website so we can connect you to the wider movement.</p>
+        <a class="btn btn-primary" href="https://share.somin.ai/fde" target="_blank" rel="noopener" data-i18n="join.c3cta">Register now</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-about">
+        <a class="wordmark gold" href="#top" aria-label="Faith Driven Singapore">
+          <span class="wm-l1">FAITH&nbsp;DRI<svg class="wm-chev" viewBox="0 0 24 32" aria-hidden="true"><path d="M5 3.5 L19 16 L5 28.5"/></svg>EN</span>
+          <span class="wm-l2">SINGAPORE</span>
+        </a>
+        <p class="foot-tag" data-i18n="footer.tagline">You're not building alone.</p>
+        <p data-i18n="footer.about">Faith Driven Singapore is the local chapter of the global <a class="inline" href="https://faithdrivenentrepreneur.org/" target="_blank" rel="noopener">Faith Driven Entrepreneur</a> movement — helping Christ-following entrepreneurs find community and fulfil their God-given call to create.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footer.links">Explore</h4>
+        <a href="#movement" data-i18n="nav.about">About</a>
+        <a href="#watch" data-i18n="nav.watch">Watch our gatherings</a>
+        <a href="#resources" data-i18n="nav.resources">Resources</a>
+        <a href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="footer.nextevent">Next event</a>
+        <a href="https://faithdrivenentrepreneur.org/the-fde-book/" target="_blank" rel="noopener" data-i18n="footer.freebook">Free ebook</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footer.connect">Connect</h4>
+        <a href="https://wa.me/6591227009" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp us</a>
+        <a href="https://share.somin.ai/IsHixT8N" target="_blank" rel="noopener" data-i18n="footer.community">WhatsApp community</a>
+        <a href="https://share.somin.ai/fde" target="_blank" rel="noopener" data-i18n="footer.register">Register with FDE</a>
+        <a href="https://faithdrivenentrepreneur.org/donate/" target="_blank" rel="noopener" data-i18n="footer.give">Give monthly</a>
+        <div class="foot-social" aria-label="Social">
+          <a href="https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.7-.5-5.4a2.8 2.8 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.6a2.8 2.8 0 0 0-2 2C1 8.3 1 12 1 12s0 3.7.5 5.4a2.8 2.8 0 0 0 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.6a2.8 2.8 0 0 0 2-2C23 15.7 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+          <a href="https://wa.me/6591227009" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.1.1-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.3-.2Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p data-i18n="footer.rights">© 2026 Faith Driven Singapore · Built by volunteers · Part of Faith Driven Movements.</p>
+      <div class="foot-lang" role="group" aria-label="Language">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="zh" lang="zh">中文</button>
+        <button data-lang="ms" lang="ms">BM</button>
+        <button data-lang="ta" lang="ta">தமிழ்</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= i18n dictionary ================= */
+const I18N = {
+"nav.about":{en:`About`,zh:`关于`,ms:`Tentang`,ta:`பற்றி`},
+"nav.serves":{en:`The Chapter`,zh:`本地分会`,ms:`Cabang Kami`,ta:`எங்கள் அமைப்பு`},
+"nav.watch":{en:`Watch`,zh:`观看`,ms:`Tonton`,ta:`பார்க்க`},
+"nav.resources":{en:`Resources`,zh:`资源`,ms:`Sumber`,ta:`வளங்கள்`},
+"nav.join":{en:`Join`,zh:`加入`,ms:`Sertai`,ta:`இணைக`},
+"nav.getintouch":{en:`Get in touch`,zh:`联系我们`,ms:`Hubungi kami`,ta:`தொடர்பு கொள்ள`},
+
+"hero.headline":{en:`You weren't meant to build <em>alone</em>.`,zh:`你，不该<em>独自</em>创业。`,ms:`Anda tidak dicipta untuk membina <em>bersendirian</em>.`,ta:`நீங்கள் <em>தனியாக</em> கட்டமைக்க வேண்டியவர் அல்ல.`},
+"hero.sub":{en:`We're the Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders and builders. Online and in person. No cost. No catch.`,zh:`我们是全球 Faith Driven 运动的新加坡分会——一个不断成长的基督徒创业者社群。线上与线下聚会，免费参与，绝无附加条件。`,ms:`Kami ialah cabang Singapura bagi gerakan global Faith Driven — komuniti pengasas dan pembina pengikut Kristus yang sentiasa berkembang. Dalam talian dan bersemuka. Tanpa kos. Tanpa syarat.`,ta:`நாங்கள் உலகளாவிய Faith Driven இயக்கத்தின் சிங்கப்பூர் அமைப்பு — கிறிஸ்துவைப் பின்பற்றும் நிறுவனர்களின் வளர்ந்துவரும் சமூகம். இணையத்திலும் நேரிலும். கட்டணமில்லை. நிபந்தனையில்லை.`},
+"hero.cta1":{en:`Join a gathering`,zh:`参加聚会`,ms:`Sertai perjumpaan`,ta:`கூட்டத்தில் இணையுங்கள்`},
+"hero.cta2":{en:`Join the WhatsApp community`,zh:`加入 WhatsApp 社群`,ms:`Sertai komuniti WhatsApp`,ta:`WhatsApp சமூகத்தில் இணையுங்கள்`},
+"hero.m1":{en:`Monthly gatherings`,zh:`每月聚会`,ms:`Perjumpaan bulanan`,ta:`மாதாந்திர கூட்டங்கள்`},
+"hero.m2":{en:`Online & in person`,zh:`线上与线下`,ms:`Dalam talian & bersemuka`,ta:`இணையம் & நேரில்`},
+"hero.m3":{en:`No cost. No catch.`,zh:`免费，无附加条件`,ms:`Tanpa kos. Tanpa syarat.`,ta:`கட்டணமில்லை. நிபந்தனையில்லை.`},
+"hero.scroll":{en:`Scroll`,zh:`向下滑动`,ms:`Skrol`,ta:`கீழே செல்க`},
+
+"movement.eyebrow":{en:`Why we gather`,zh:`我们为何聚集`,ms:`Mengapa kami berkumpul`,ta:`நாம் ஏன் கூடுகிறோம்`},
+"movement.headline":{en:`This movement is <em>yours</em>.`,zh:`这场运动，属于<em>你</em>。`,ms:`Gerakan ini <em>milik anda</em>.`,ta:`இந்த இயக்கம் <em>உங்களுடையது</em>.`},
+"movement.p1":{en:`God gave you ideas, dreams and ventures to reflect His image. Faith driven ventures bring order out of chaos, solve problems, and create dignity. You weren't meant to build alone — and here in Singapore, you don't have to.`,zh:`神赐给你想法、梦想与事业，好让你反映祂的形象。信仰驱动的事业能在混乱中带来秩序、解决难题、创造尊严。你不该独自创业——在新加坡，你也不必如此。`,ms:`Tuhan memberi anda idea, impian dan usaha niaga untuk mencerminkan gambar-Nya. Usaha yang didorong iman membawa keteraturan daripada kekacauan, menyelesaikan masalah dan mencipta maruah. Anda tidak dicipta untuk membina bersendirian — dan di Singapura, anda tidak perlu berbuat demikian.`,ta:`கடவுள் தம் சாயலைப் பிரதிபலிக்க உங்களுக்கு எண்ணங்களையும் கனவுகளையும் தொழில்முயற்சிகளையும் கொடுத்தார். விசுவாசத்தால் இயங்கும் தொழில்முயற்சிகள் குழப்பத்தில் ஒழுங்கைக் கொண்டுவந்து, சிக்கல்களைத் தீர்த்து, கண்ணியத்தை உருவாக்குகின்றன. நீங்கள் தனியாக கட்டமைக்க வேண்டியவர் அல்ல — சிங்கப்பூரில், அப்படி இருக்க வேண்டிய அவசியமில்லை.`},
+"movement.pull":{en:`You need allies. We have groups.`,zh:`你需要同路人。我们有小组。`,ms:`Anda perlukan sekutu. Kami ada kumpulan.`,ta:`உங்களுக்கு துணை தேவை. எங்களிடம் குழுக்கள் உள்ளன.`},
+"movement.p2":{en:`From Browzwear to City Harvest, from Endowus to Block71, we gather founders across the island once a month — to worship, to learn from entrepreneurs who've done the work, and to walk the journey together.`,zh:`从 Browzwear 到 City Harvest，从 Endowus 到 Block71，我们每月一次召集全岛的创业者——一同敬拜、向走过这条路的创业者学习，并彼此同行。`,ms:`Dari Browzwear ke City Harvest, dari Endowus ke Block71, kami mengumpulkan para pengasas di seluruh pulau sebulan sekali — untuk beribadah, belajar daripada usahawan yang telah melaluinya, dan meniti perjalanan bersama.`,ta:`Browzwear முதல் City Harvest வரை, Endowus முதல் Block71 வரை, மாதம் ஒருமுறை தீவு முழுவதிலுமிருந்து நிறுவனர்களைக் கூட்டுகிறோம் — வழிபடவும், அனுபவம் மிக்க தொழில்முனைவோரிடமிருந்து கற்கவும், பயணத்தை ஒன்றாக நடக்கவும்.`},
+"movement.phototag":{en:`A gathering · Browzwear, Singapore`,zh:`一场聚会 · Browzwear，新加坡`,ms:`Satu perjumpaan · Browzwear, Singapura`,ta:`ஒரு கூட்டம் · Browzwear, சிங்கப்பூர்`},
+
+"stats.eyebrow":{en:`The opportunity`,zh:`契机`,ms:`Peluang`,ta:`வாய்ப்பு`},
+"stats.s1label":{en:`Entrepreneurs worldwide`,zh:`全球创业者`,ms:`Usahawan di seluruh dunia`,ta:`உலகெங்கிலும் தொழில்முனைவோர்`},
+"stats.s2label":{en:`are Christ-following`,zh:`是基督徒`,ms:`mengikut Kristus`,ta:`கிறிஸ்துவைப் பின்பற்றுபவர்கள்`},
+"stats.s3label":{en:`are building alone`,zh:`独自打拼`,ms:`membina bersendirian`,ta:`தனியாக கட்டமைக்கிறார்கள்`},
+"stats.punch":{en:`That's <em>99.7%</em> building without a community. In Singapore, we're changing that — one gathering, one founder, one story at a time.`,zh:`也就是说，<em>99.7%</em> 的人在没有社群的情况下打拼。在新加坡，我们正在改变这一切——一次聚会、一位创业者、一个故事地改变。`,ms:`Itu bermakna <em>99.7%</em> membina tanpa komuniti. Di Singapura, kami sedang mengubahnya — satu perjumpaan, satu pengasas, satu kisah pada satu masa.`,ta:`அதாவது <em>99.7%</em> பேர் சமூகமின்றி கட்டமைக்கிறார்கள். சிங்கப்பூரில், நாங்கள் அதை மாற்றுகிறோம் — ஒவ்வொரு கூட்டமாக, ஒவ்வொரு நிறுவனராக, ஒவ்வொரு கதையாக.`},
+"stats.cta":{en:`Find your people`,zh:`找到你的同路人`,ms:`Cari komuniti anda`,ta:`உங்கள் மக்களைக் கண்டறியுங்கள்`},
+
+"serves.eyebrow":{en:`How Faith Driven Singapore serves you`,zh:`Faith Driven Singapore 如何服事你`,ms:`Bagaimana Faith Driven Singapore membantu anda`,ta:`Faith Driven Singapore உங்களுக்கு எப்படி உதவுகிறது`},
+"serves.headline":{en:`Four ways in.`,zh:`四种参与方式。`,ms:`Empat cara untuk masuk.`,ta:`இணைய நான்கு வழிகள்.`},
+"serves.c1title":{en:`Community`,zh:`社群`,ms:`Komuniti`,ta:`சமூகம்`},
+"serves.c1body":{en:`Join a Foundations Group — 10 to 15 entrepreneurs, eight weeks, online or in person.`,zh:`加入 Foundations 小组——10 到 15 位创业者，八周课程，线上或线下。`,ms:`Sertai Kumpulan Foundations — 10 hingga 15 usahawan, lapan minggu, dalam talian atau bersemuka.`,ta:`Foundations குழுவில் இணையுங்கள் — 10 முதல் 15 தொழில்முனைவோர், எட்டு வாரங்கள், இணையத்தில் அல்லது நேரில்.`},
+"serves.c1cta":{en:`Register with FDE`,zh:`在 FDE 注册`,ms:`Daftar dengan FDE`,ta:`FDE-யில் பதிவு`},
+"serves.c2title":{en:`Content`,zh:`内容`,ms:`Kandungan`,ta:`உள்ளடக்கம்`},
+"serves.c2body":{en:`Watch founder stories on YouTube and listen to the weekly podcast.`,zh:`在 YouTube 观看创业者故事，并收听每周播客。`,ms:`Tonton kisah pengasas di YouTube dan dengar podcast mingguan.`,ta:`YouTube-இல் நிறுவனர்களின் கதைகளைப் பாருங்கள், வாராந்திர பாட்காஸ்ட்டைக் கேளுங்கள்.`},
+"serves.c2cta":{en:`Watch & listen`,zh:`观看与收听`,ms:`Tonton & dengar`,ta:`பார்க்க & கேட்க`},
+"serves.c3title":{en:`Gatherings`,zh:`聚会`,ms:`Perjumpaan`,ta:`கூட்டங்கள்`},
+"serves.c3body":{en:`We meet monthly across Singapore. See what's coming next.`,zh:`我们每月在新加坡各地聚会。看看下一场活动。`,ms:`Kami berjumpa setiap bulan di seluruh Singapura. Lihat acara seterusnya.`,ta:`நாங்கள் மாதந்தோறும் சிங்கப்பூர் முழுவதும் சந்திக்கிறோம். அடுத்த நிகழ்வைப் பாருங்கள்.`},
+"serves.c3cta":{en:`See the next event`,zh:`查看下一场活动`,ms:`Lihat acara seterusnya`,ta:`அடுத்த நிகழ்வைப் பாருங்கள்`},
+"serves.c4title":{en:`The Book`,zh:`这本书`,ms:`Buku Ini`,ta:`புத்தகம்`},
+"serves.c4body":{en:`Get the free Faith Driven Entrepreneur ebook and video series.`,zh:`免费获取 Faith Driven Entrepreneur 电子书与视频系列。`,ms:`Dapatkan ebook dan siri video Faith Driven Entrepreneur secara percuma.`,ta:`இலவச Faith Driven Entrepreneur மின்னூல் மற்றும் வீடியோ தொடரைப் பெறுங்கள்.`},
+"serves.c4cta":{en:`Get the book`,zh:`获取这本书`,ms:`Dapatkan buku`,ta:`புத்தகத்தைப் பெறுங்கள்`},
+
+"watch.eyebrow":{en:`From our gatherings`,zh:`来自我们的聚会`,ms:`Daripada perjumpaan kami`,ta:`எங்கள் கூட்டங்களிலிருந்து`},
+"watch.headline":{en:`Real founders. Real rooms. <em>Real</em> stories.`,zh:`真实的创业者。真实的现场。<em>真实</em>的故事。`,ms:`Pengasas sebenar. Ruang sebenar. Kisah <em>sebenar</em>.`,ta:`உண்மையான நிறுவனர்கள். உண்மையான அரங்குகள். <em>உண்மையான</em> கதைகள்.`},
+"watch.sub":{en:`Recorded at gatherings across Singapore — our eight-session journey through what it means to be a Faith Driven Entrepreneur. Press play.`,zh:`录制于新加坡各地的聚会——我们探讨何为信仰驱动创业者的八场系列。按下播放。`,ms:`Dirakam di perjumpaan seluruh Singapura — perjalanan lapan sesi tentang maksud menjadi Faith Driven Entrepreneur. Tekan main.`,ta:`சிங்கப்பூர் முழுவதிலுமுள்ள கூட்டங்களில் பதிவு செய்யப்பட்டது — Faith Driven Entrepreneur ஆக இருப்பதன் அர்த்தம் குறித்த எட்டு அமர்வுப் பயணம். Play அழுத்துங்கள்.`},
+"watch.featured":{en:`Featured`,zh:`精选`,ms:`Pilihan`,ta:`சிறப்பு`},
+"watch.fh":{en:`When founders gather, something shifts.`,zh:`当创业者聚在一起，一些东西开始改变。`,ms:`Apabila pengasas berkumpul, sesuatu berubah.`,ta:`நிறுவனர்கள் கூடும்போது, ஏதோ ஒன்று மாறுகிறது.`},
+"watch.fp":{en:`Three days, one room, and a city's worth of builders wrestling with the same questions you are. This is what the movement looks like in Singapore.`,zh:`三天、一个空间，一整座城市的创业者，与你思考着同样的问题。这就是新加坡这场运动的样貌。`,ms:`Tiga hari, satu ruang, dan pembina seluruh bandar bergelut dengan soalan yang sama seperti anda. Inilah rupa gerakan ini di Singapura.`,ta:`மூன்று நாட்கள், ஒரு அரங்கம், மற்றும் நீங்கள் சிந்திக்கும் அதே கேள்விகளுடன் போராடும் ஒரு நகரத்தின் கட்டமைப்பாளர்கள். சிங்கப்பூரில் இந்த இயக்கம் இப்படித்தான் இருக்கிறது.`},
+"watch.ytcta":{en:`Watch on YouTube`,zh:`在 YouTube 观看`,ms:`Tonton di YouTube`,ta:`YouTube-இல் பாருங்கள்`},
+"watch.sgchapter":{en:`Singapore chapter`,zh:`新加坡分会`,ms:`Cabang Singapura`,ta:`சிங்கப்பூர் அமைப்பு`},
+"label.session":{en:`Session`,zh:`场次`,ms:`Sesi`,ta:`அமர்வு`},
+
+"resources.eyebrow":{en:`Keep going between sessions`,zh:`在聚会之间持续成长`,ms:`Teruskan antara sesi`,ta:`அமர்வுகளுக்கு இடையில் தொடருங்கள்`},
+"resources.headline":{en:`Resources for the journey.`,zh:`旅途中的资源。`,ms:`Sumber untuk perjalanan.`,ta:`பயணத்திற்கான வளங்கள்.`},
+"resources.r1title":{en:`The Foundation Course`,zh:`Foundation 课程`,ms:`Kursus Foundation`,ta:`Foundation பாடநெறி`},
+"resources.r1body":{en:`Our flagship eight-session video series with J.D. Greear and Henry Kaestner. No cost. No catch.`,zh:`我们的旗舰八场视频系列，由 J.D. Greear 与 Henry Kaestner 主讲。免费，无附加条件。`,ms:`Siri video lapan sesi utama kami bersama J.D. Greear dan Henry Kaestner. Tanpa kos. Tanpa syarat.`,ta:`J.D. Greear மற்றும் Henry Kaestner உடன் எங்கள் முதன்மை எட்டு அமர்வு வீடியோ தொடர். கட்டணமில்லை. நிபந்தனையில்லை.`},
+"resources.r1cta":{en:`Explore the course`,zh:`探索课程`,ms:`Terokai kursus`,ta:`பாடநெறியை ஆராயுங்கள்`},
+"resources.r2title":{en:`The FDE Book`,zh:`FDE 这本书`,ms:`Buku FDE`,ta:`FDE புத்தகம்`},
+"resources.r2body":{en:`A better way to build — where faith informs real business decisions. Free to read.`,zh:`一种更好的创业方式——让信仰引导真实的商业决策。免费阅读。`,ms:`Cara yang lebih baik untuk membina — apabila iman memandu keputusan perniagaan sebenar. Percuma untuk dibaca.`,ta:`கட்டமைக்க ஒரு சிறந்த வழி — விசுவாசம் உண்மையான வணிக முடிவுகளை வழிநடத்தும் இடம். இலவசமாகப் படிக்கலாம்.`},
+"resources.r2cta":{en:`Read the book`,zh:`阅读这本书`,ms:`Baca buku`,ta:`புத்தகத்தைப் படியுங்கள்`},
+"resources.r3title":{en:`The Podcast`,zh:`播客`,ms:`Podcast`,ta:`பாட்காஸ்ட்`},
+"resources.r3body":{en:`For the faithful disruptors called to create. New conversations every week.`,zh:`献给蒙召去创造的忠心开拓者。每周更新对话。`,ms:`Untuk pengganggu setia yang dipanggil untuk mencipta. Perbualan baharu setiap minggu.`,ta:`படைக்க அழைக்கப்பட்ட விசுவாசமுள்ள மாற்றுச் சிந்தனையாளர்களுக்காக. ஒவ்வொரு வாரமும் புதிய உரையாடல்கள்.`},
+"resources.r3cta":{en:`Listen now`,zh:`立即收听`,ms:`Dengar sekarang`,ta:`இப்போது கேளுங்கள்`},
+
+"event.eyebrow":{en:`Next session · Save the date`,zh:`下一场 · 敬请留意`,ms:`Sesi seterusnya · Simpan tarikh`,ta:`அடுத்த அமர்வு · தேதியைக் குறியுங்கள்`},
+"event.headline":{en:`Come to the next <em>gathering</em>.`,zh:`来参加下一场<em>聚会</em>。`,ms:`Hadiri <em>perjumpaan</em> seterusnya.`,ta:`அடுத்த <em>கூட்டத்திற்கு</em> வாருங்கள்.`},
+"event.sub":{en:`Worship, a founder story, and honest conversation with people who get it. Whether you're just starting or scaling up — you're welcome.`,zh:`敬拜、一个创业者的故事，以及与懂你的人真诚交流。无论你是刚起步还是正在扩张——都欢迎你。`,ms:`Ibadah, kisah seorang pengasas, dan perbualan jujur dengan mereka yang memahami. Sama ada anda baru bermula atau sedang berkembang — anda dialu-alukan.`,ta:`வழிபாடு, ஒரு நிறுவனரின் கதை, மற்றும் புரிந்துகொள்ளும் மக்களுடன் நேர்மையான உரையாடல். நீங்கள் தொடங்குபவராக இருந்தாலும் விரிவாக்குபவராக இருந்தாலும் — உங்களை வரவேற்கிறோம்.`},
+"event.cta":{en:`Register on Eventbrite`,zh:`在 Eventbrite 报名`,ms:`Daftar di Eventbrite`,ta:`Eventbrite-இல் பதிவு செய்யுங்கள்`},
+
+"give.eyebrow":{en:`Partner with us`,zh:`与我们同工`,ms:`Bekerjasama dengan kami`,ta:`எங்களுடன் இணையுங்கள்`},
+"give.headline":{en:`Become a monthly <em>partner</em>.`,zh:`成为每月<em>同工</em>。`,ms:`Jadi <em>rakan</em> bulanan.`,ta:`மாதாந்திர <em>கூட்டாளியாக</em> மாறுங்கள்.`},
+"give.body":{en:`Your monthly gift empowers our volunteers — funding the food, venue and essentials to host Singapore's largest ongoing community of Faith Driven Entrepreneurs.`,zh:`你每月的奉献支持我们的义工——为聚会提供食物、场地及必需品，好让我们持续举办新加坡最大的信仰驱动创业者社群。`,ms:`Sumbangan bulanan anda memperkasakan sukarelawan kami — membiayai makanan, tempat dan keperluan untuk menganjurkan komuniti Faith Driven Entrepreneur terbesar yang berterusan di Singapura.`,ta:`உங்கள் மாதாந்திர நன்கொடை எங்கள் தன்னார்வலர்களை வலுப்படுத்துகிறது — சிங்கப்பூரின் மிகப்பெரிய தொடர்ச்சியான Faith Driven Entrepreneur சமூகத்தை நடத்த உணவு, இடம் மற்றும் அத்தியாவசியங்களுக்கு நிதியளிக்கிறது.`},
+"give.month":{en:`per month`,zh:`每月`,ms:`sebulan`,ta:`மாதம்`},
+"give.cta":{en:`Give monthly`,zh:`每月奉献`,ms:`Beri bulanan`,ta:`மாதந்தோறும் கொடையளியுங்கள்`},
+"give.note":{en:`Prefer a one-time gift or a local bank transfer?`,zh:`想一次性奉献或本地银行转账？`,ms:`Lebih suka sumbangan sekali sahaja atau pemindahan bank tempatan?`,ta:`ஒருமுறை நன்கொடை அல்லது உள்ளூர் வங்கி பரிமாற்றம் விரும்புகிறீர்களா?`},
+"give.notelink":{en:`Get in touch.`,zh:`请联系我们。`,ms:`Hubungi kami.`,ta:`தொடர்பு கொள்ளுங்கள்.`},
+
+"join.eyebrow":{en:`Get connected`,zh:`建立连接`,ms:`Berhubung`,ta:`இணைந்திடுங்கள்`},
+"join.headline":{en:`Three ways to join us.`,zh:`加入我们的三种方式。`,ms:`Tiga cara untuk menyertai kami.`,ta:`எங்களுடன் இணைய மூன்று வழிகள்.`},
+"join.c1title":{en:`Get in touch`,zh:`联系我们`,ms:`Hubungi kami`,ta:`தொடர்பு கொள்ளுங்கள்`},
+"join.c1body":{en:`Message us on WhatsApp — we'll help you find your next step.`,zh:`在 WhatsApp 上给我们留言——我们会帮你找到下一步。`,ms:`Hantar mesej kepada kami di WhatsApp — kami akan bantu anda mencari langkah seterusnya.`,ta:`WhatsApp-இல் எங்களுக்கு செய்தி அனுப்புங்கள் — உங்கள் அடுத்த படியைக் கண்டறிய உதவுவோம்.`},
+"join.c1cta":{en:`Chat on WhatsApp`,zh:`在 WhatsApp 聊天`,ms:`Sembang di WhatsApp`,ta:`WhatsApp-இல் அரட்டையடியுங்கள்`},
+"join.c2title":{en:`WhatsApp community`,zh:`WhatsApp 社群`,ms:`Komuniti WhatsApp`,ta:`WhatsApp சமூகம்`},
+"join.c2body":{en:`Join the group chat — prayer, encouragement, and what's on between sessions.`,zh:`加入群组聊天——代祷、鼓励，以及聚会之间的最新动态。`,ms:`Sertai sembang kumpulan — doa, galakan, dan aktiviti antara sesi.`,ta:`குழு அரட்டையில் இணையுங்கள் — ஜெபம், ஊக்கம், மற்றும் அமர்வுகளுக்கு இடையிலான செய்திகள்.`},
+"join.c2cta":{en:`Join the group`,zh:`加入群组`,ms:`Sertai kumpulan`,ta:`குழுவில் இணையுங்கள்`},
+"join.c3title":{en:`Register with FDE`,zh:`在 FDE 注册`,ms:`Daftar dengan FDE`,ta:`FDE-யில் பதிவு`},
+"join.c3body":{en:`Register on the global FDE website so we can connect you to the wider movement.`,zh:`在全球 FDE 网站注册，让我们能将你连接到更广大的运动。`,ms:`Daftar di laman web global FDE supaya kami dapat menghubungkan anda dengan gerakan yang lebih luas.`,ta:`உலகளாவிய FDE இணையதளத்தில் பதிவு செய்யுங்கள், அப்போது பரந்த இயக்கத்துடன் உங்களை இணைக்க முடியும்.`},
+"join.c3cta":{en:`Register now`,zh:`立即注册`,ms:`Daftar sekarang`,ta:`இப்போது பதிவு செய்யுங்கள்`},
+
+"footer.tagline":{en:`You're not building alone.`,zh:`你并非独自创业。`,ms:`Anda tidak membina bersendirian.`,ta:`நீங்கள் தனியாக கட்டமைக்கவில்லை.`},
+"footer.about":{en:`Faith Driven Singapore is the local chapter of the global <a class="inline" href="https://faithdrivenentrepreneur.org/" target="_blank" rel="noopener">Faith Driven Entrepreneur</a> movement — helping Christ-following entrepreneurs find community and fulfil their God-given call to create.`,zh:`Faith Driven Singapore 是全球 <a class="inline" href="https://faithdrivenentrepreneur.org/" target="_blank" rel="noopener">Faith Driven Entrepreneur</a> 运动的本地分会——帮助基督徒创业者找到社群，并实现神所赐的创造呼召。`,ms:`Faith Driven Singapore ialah cabang tempatan bagi gerakan global <a class="inline" href="https://faithdrivenentrepreneur.org/" target="_blank" rel="noopener">Faith Driven Entrepreneur</a> — membantu usahawan pengikut Kristus mencari komuniti dan memenuhi panggilan mereka untuk mencipta.`,ta:`Faith Driven Singapore என்பது உலகளாவிய <a class="inline" href="https://faithdrivenentrepreneur.org/" target="_blank" rel="noopener">Faith Driven Entrepreneur</a> இயக்கத்தின் உள்ளூர் அமைப்பு — கிறிஸ்துவைப் பின்பற்றும் தொழில்முனைவோர் சமூகத்தைக் கண்டறிந்து, படைக்கும் தங்கள் அழைப்பை நிறைவேற்ற உதவுகிறது.`},
+"footer.links":{en:`Explore`,zh:`探索`,ms:`Terokai`,ta:`ஆராயுங்கள்`},
+"footer.connect":{en:`Connect`,zh:`连接`,ms:`Berhubung`,ta:`இணையுங்கள்`},
+"footer.nextevent":{en:`Next event`,zh:`下一场活动`,ms:`Acara seterusnya`,ta:`அடுத்த நிகழ்வு`},
+"footer.freebook":{en:`Free ebook`,zh:`免费电子书`,ms:`Ebook percuma`,ta:`இலவச மின்னூல்`},
+"footer.whatsapp":{en:`WhatsApp us`,zh:`WhatsApp 联系`,ms:`WhatsApp kami`,ta:`எங்களை WhatsApp செய்யுங்கள்`},
+"footer.community":{en:`WhatsApp community`,zh:`WhatsApp 社群`,ms:`Komuniti WhatsApp`,ta:`WhatsApp சமூகம்`},
+"footer.register":{en:`Register with FDE`,zh:`在 FDE 注册`,ms:`Daftar dengan FDE`,ta:`FDE-யில் பதிவு`},
+"footer.give":{en:`Give monthly`,zh:`每月奉献`,ms:`Beri bulanan`,ta:`மாதந்தோறும் கொடை`},
+"footer.rights":{en:`© 2026 Faith Driven Singapore · Built by volunteers · Part of Faith Driven Movements.`,zh:`© 2026 Faith Driven Singapore · 由义工建立 · 隶属 Faith Driven Movements。`,ms:`© 2026 Faith Driven Singapore · Dibina oleh sukarelawan · Sebahagian daripada Faith Driven Movements.`,ta:`© 2026 Faith Driven Singapore · தன்னார்வலர்களால் உருவாக்கப்பட்டது · Faith Driven Movements-இன் பகுதி.`}
+};
+
+/* ================= language switching ================= */
+const SUPPORTED = ["en","zh","ms","ta"];
+function applyLang(lang){
+  if(!SUPPORTED.includes(lang)) lang = "en";
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    const dict = I18N[el.getAttribute("data-i18n")];
+    if(dict){ el.innerHTML = dict[lang] || dict.en; }
+  });
+  document.querySelectorAll("[data-lang]").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+}
+document.querySelectorAll("[data-lang]").forEach(function(btn){
+  btn.addEventListener("click", function(){ applyLang(btn.getAttribute("data-lang")); });
+});
+/* auto-detect on first load among supported langs */
+(function(){
+  const nav = (navigator.language || "en").toLowerCase();
+  let pick = "en";
+  if(nav.startsWith("zh")) pick = "zh";
+  else if(nav.startsWith("ms") || nav.startsWith("id")) pick = "ms";
+  else if(nav.startsWith("ta")) pick = "ta";
+  if(pick !== "en") applyLang(pick);
+})();
+
+/* ================= mobile menu ================= */
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+function setMenu(open){
+  hamburger.classList.toggle("open", open);
+  mobileMenu.classList.toggle("open", open);
+  hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+  document.body.style.overflow = open ? "hidden" : "";
+}
+hamburger.addEventListener("click", function(){ setMenu(!mobileMenu.classList.contains("open")); });
+mobileMenu.querySelectorAll("a.m-link").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape" && mobileMenu.classList.contains("open")) setMenu(false); });
+
+/* ================= nav scroll state ================= */
+const nav = document.getElementById("nav");
+let lastY = 0;
+function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 24); }
+window.addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+
+/* ================= lite YouTube ================= */
+function loadVideo(el){
+  if(el.classList.contains("is-playing")) return;
+  const id = el.getAttribute("data-id");
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+  iframe.title = "Faith Driven Singapore gathering";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allowFullscreen = true;
+  el.appendChild(iframe);
+  el.classList.add("is-playing");
+}
+document.querySelectorAll(".video[data-id]").forEach(function(v){
+  v.addEventListener("click", function(){ loadVideo(v); });
+  v.addEventListener("keydown", function(e){
+    if(e.key === "Enter" || e.key === " "){ e.preventDefault(); loadVideo(v); }
+  });
+});
+
+/* ================= scroll reveal ================= */
+if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+}
+</script>
+</body>
+</html>
