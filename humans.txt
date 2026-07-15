@@ -1,0 +1,13 @@
+/* TEAM */
+  Faith Driven Singapore — built and run by volunteers.
+  Part of the global Faith Driven Entrepreneur movement.
+  Contact: WhatsApp +65 9122 7009
+
+/* SITE */
+  Last update: 2026-07-08
+  Language: English, 中文, Bahasa Melayu, தமிழ்
+  Standards: HTML5, responsive, accessible
+  Components: single-page site, no tracking, no cookies
+
+/* THANKS */
+  To every founder who shows up. You're not building alone.

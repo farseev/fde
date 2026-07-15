@@ -1,0 +1,53 @@
+# robots.txt — Faith Driven Singapore (https://faithdriven.sg)
+# We welcome search engines AND AI / LLM crawlers. Everything is open.
+
+User-agent: *
+Allow: /
+
+# ---- AI / LLM crawlers (explicitly welcomed for Generative Engine Optimization) ----
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://faithdriven.sg/sitemap.xml

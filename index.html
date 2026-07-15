@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ============================================================
-     BEFORE GOING LIVE: replace https://faithdrivensingapore.org everywhere below
-     with your real domain so social-share previews (WhatsApp,
-     Facebook, LinkedIn, X) and the canonical/SEO tags resolve.
-     The favicon, manifest and og-image files ship alongside this
-     index.html — keep them in the same folder.
+     Canonical domain: https://faithdriven.sg
+     If the domain ever changes, update https://faithdriven.sg here
+     AND in sitemap.xml, robots.txt and llms.txt. Keep favicon*,
+     apple-touch-icon.png, og-image.png, site.webmanifest, robots.txt,
+     sitemap.xml and llms.txt in the same web-root folder as this file.
      ============================================================ -->
 
 <title>Faith Driven Singapore — You're not building alone</title>
@@ -19,7 +19,14 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0B0B0B">
 <meta name="color-scheme" content="dark light">
-<link rel="canonical" href="https://faithdrivensingapore.org/">
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="geo.region" content="SG">
+<meta name="geo.placename" content="Singapore">
+<meta name="geo.position" content="1.3521;103.8198">
+<meta name="ICBM" content="1.3521, 103.8198">
+<meta name="application-name" content="Faith Driven Singapore">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt — context for AI &amp; LLM crawlers">
+<link rel="canonical" href="https://faithdriven.sg/">
 
 <!-- Favicons & app icons -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230B0B0B'/%3E%3Cpath d='M22 15 L43 32 L22 49' fill='none' stroke='%23E0612F' stroke-width='8.4' stroke-linecap='butt' stroke-linejoin='miter'/%3E%3C/svg%3E" type="image/svg+xml">
@@ -37,9 +44,9 @@
 <meta property="og:site_name" content="Faith Driven Singapore">
 <meta property="og:title" content="Faith Driven Singapore — You're not building alone">
 <meta property="og:description" content="The Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.">
-<meta property="og:url" content="https://faithdrivensingapore.org/">
-<meta property="og:image" content="https://faithdrivensingapore.org/og-image.png">
-<meta property="og:image:secure_url" content="https://faithdrivensingapore.org/og-image.png">
+<meta property="og:url" content="https://faithdriven.sg/">
+<meta property="og:image" content="https://faithdriven.sg/og-image.png">
+<meta property="og:image:secure_url" content="https://faithdriven.sg/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -53,7 +60,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Faith Driven Singapore — You're not building alone">
 <meta name="twitter:description" content="A growing community of Christ-following founders in Singapore. Gather monthly, watch founder stories, join a Foundations Group. No cost. No catch.">
-<meta name="twitter:image" content="https://faithdrivensingapore.org/og-image.png">
+<meta name="twitter:image" content="https://faithdriven.sg/og-image.png">
 <meta name="twitter:image:alt" content="Faith Driven Singapore — You're not building alone">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -374,6 +381,21 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- faq ---------- */
+.faq{border-top:1px solid var(--line-dark)}
+.faq-list{margin-top:2.6rem;max-width:840px}
+.faq-item{border-bottom:1px solid var(--line-dark)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;padding:1.55rem 0;font-family:var(--display);font-weight:700;font-size:clamp(1.06rem,2vw,1.36rem);color:#fff;line-height:1.32;transition:color .18s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::marker{content:""}
+.faq-item summary:hover{color:var(--gold-light)}
+.faq-ic{flex:none;width:15px;height:20px;color:var(--orange);transition:transform .3s ease}
+.faq-ic path{fill:none;stroke:currentColor;stroke-width:5;stroke-linejoin:miter}
+.faq-item[open] .faq-ic{transform:rotate(90deg)}
+.faq-a{padding:0 0 1.65rem;max-width:74ch}
+.faq-a p{color:var(--grey);font-size:1.02rem;line-height:1.65}
+.faq-a a{color:var(--gold-light);text-decoration:underline;text-underline-offset:3px}
 </style>
 <script type="application/ld+json">
 {
@@ -381,19 +403,18 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
   "@graph": [
     {
       "@type": ["Organization","NGO"],
-      "@id": "https://faithdrivensingapore.org/#organization",
+      "@id": "https://faithdriven.sg/#organization",
       "name": "Faith Driven Singapore",
-      "alternateName": "Faith Driven Entrepreneur Singapore",
-      "url": "https://faithdrivensingapore.org/",
-      "logo": "https://faithdrivensingapore.org/favicon-512x512.png",
-      "image": "https://faithdrivensingapore.org/og-image.png",
-      "description": "Faith Driven Singapore is the local chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders. Monthly gatherings, online and in person. No cost. No catch.",
+      "alternateName": ["Faith Driven Entrepreneur Singapore","Faith Driven SG"],
+      "url": "https://faithdriven.sg/",
+      "logo": "https://faithdriven.sg/favicon-512x512.png",
+      "image": "https://faithdriven.sg/og-image.png",
+      "description": "Faith Driven Singapore is the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders. Monthly gatherings, online and in person. No cost. No catch.",
+      "slogan": "You're not building alone.",
       "areaServed": { "@type": "Country", "name": "Singapore" },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Faith Driven Entrepreneur",
-        "url": "https://faithdrivenentrepreneur.org/"
-      },
+      "foundingLocation": { "@type": "Place", "name": "Singapore" },
+      "knowsLanguage": ["en","zh","ms","ta"],
+      "parentOrganization": { "@type": "Organization", "name": "Faith Driven Entrepreneur", "url": "https://faithdrivenentrepreneur.org/" },
       "sameAs": [
         "https://www.youtube.com/channel/UCy0L7vhcU5iSuap8kEmpHlA",
         "https://faithdrivenentrepreneur.org/"
@@ -401,17 +422,44 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "community",
+        "telephone": "+65-9122-7009",
         "url": "https://wa.me/6591227009",
         "availableLanguage": ["English","Chinese","Malay","Tamil"]
       }
     },
     {
       "@type": "WebSite",
-      "@id": "https://faithdrivensingapore.org/#website",
-      "url": "https://faithdrivensingapore.org/",
+      "@id": "https://faithdriven.sg/#website",
+      "url": "https://faithdriven.sg/",
       "name": "Faith Driven Singapore",
+      "description": "Faith Driven Singapore is the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders. Monthly gatherings, online and in person. No cost. No catch.",
       "inLanguage": ["en","zh","ms","ta"],
-      "publisher": { "@id": "https://faithdrivensingapore.org/#organization" }
+      "publisher": { "@id": "https://faithdriven.sg/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://faithdriven.sg/#webpage",
+      "url": "https://faithdriven.sg/",
+      "name": "Faith Driven Singapore — You're not building alone",
+      "isPartOf": { "@id": "https://faithdriven.sg/#website" },
+      "about": { "@id": "https://faithdriven.sg/#organization" },
+      "primaryImageOfPage": "https://faithdriven.sg/og-image.png",
+      "inLanguage": "en",
+      "description": "Faith Driven Singapore is the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders. Monthly gatherings, online and in person. No cost. No catch."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://faithdriven.sg/#faq",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://faithdriven.sg/#website" },
+      "mainEntity": [
+      {"@type":"Question","name":"What is Faith Driven Singapore?","acceptedAnswer":{"@type":"Answer","text":"We're the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders who gather to worship, learn, and grow together. It's free to be part of."}},
+      {"@type":"Question","name":"Who is it for — can I join?","acceptedAnswer":{"@type":"Answer","text":"It's for Christ-following entrepreneurs, founders, and builders in Singapore — whether you're just starting out or scaling up. Everyone is welcome, and you don't need to come with a group."}},
+      {"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"Nothing. No cost, no catch. Our gatherings and Foundations Groups are free — the community is sustained by volunteers and monthly partners."}},
+      {"@type":"Question","name":"What happens at a gathering?","acceptedAnswer":{"@type":"Answer","text":"Worship, a founder's story, and honest conversation with people who understand the journey. We meet monthly across Singapore, both online and in person."}},
+      {"@type":"Question","name":"What is a Foundations Group?","acceptedAnswer":{"@type":"Answer","text":"An 8-week journey with 10–15 entrepreneurs through the Marks of a Faith Driven Entrepreneur, using the video series featuring J.D. Greear and Henry Kaestner. You can join online or in person."}},
+      {"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Message us on WhatsApp, join our WhatsApp community group, register with Faith Driven Entrepreneur, or simply come to the next gathering — every link you need is on this page."}}
+      ]
     }
   ]
 }
@@ -738,6 +786,42 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section s-black faq" id="faq">
+  <div class="container">
+    <div class="head-block reveal">
+      <span class="eyebrow" data-i18n="faq.eyebrow">Good to know</span>
+      <h2 class="display" data-i18n="faq.headline">Common questions.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q1">What is Faith Driven Singapore?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a1">We're the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders who gather to worship, learn, and grow together. It's free to be part of.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q2">Who is it for — can I join?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a2">It's for Christ-following entrepreneurs, founders, and builders in Singapore — whether you're just starting out or scaling up. Everyone is welcome, and you don't need to come with a group.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q3">How much does it cost?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a3">Nothing. No cost, no catch. Our gatherings and Foundations Groups are free — the community is sustained by volunteers and monthly partners.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q4">What happens at a gathering?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a4">Worship, a founder's story, and honest conversation with people who understand the journey. We meet monthly across Singapore, both online and in person.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q5">What is a Foundations Group?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a5">An 8-week journey with 10–15 entrepreneurs through the Marks of a Faith Driven Entrepreneur, using the video series featuring J.D. Greear and Henry Kaestner. You can join online or in person.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q6">How do I get started?</span><svg class="faq-ic" viewBox="0 0 24 32" aria-hidden="true"><path d="M6 4 L19 16 L6 28"/></svg></summary>
+        <div class="faq-a"><p data-i18n="faq.a6">Message us on WhatsApp, join our WhatsApp community group, register with Faith Driven Entrepreneur, or simply come to the next gathering — every link you need is on this page.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- JOIN -->
 <section class="section s-paper angle-top" id="join">
   <div class="container">
@@ -917,7 +1001,21 @@ const I18N = {
 "footer.community":{en:`WhatsApp community`,zh:`WhatsApp 社群`,ms:`Komuniti WhatsApp`,ta:`WhatsApp சமூகம்`},
 "footer.register":{en:`Register with FDE`,zh:`在 FDE 注册`,ms:`Daftar dengan FDE`,ta:`FDE-யில் பதிவு`},
 "footer.give":{en:`Give monthly`,zh:`每月奉献`,ms:`Beri bulanan`,ta:`மாதந்தோறும் கொடை`},
-"footer.rights":{en:`© 2026 Faith Driven Singapore · Built by volunteers · Part of Faith Driven Movements.`,zh:`© 2026 Faith Driven Singapore · 由义工建立 · 隶属 Faith Driven Movements。`,ms:`© 2026 Faith Driven Singapore · Dibina oleh sukarelawan · Sebahagian daripada Faith Driven Movements.`,ta:`© 2026 Faith Driven Singapore · தன்னார்வலர்களால் உருவாக்கப்பட்டது · Faith Driven Movements-இன் பகுதி.`}
+"footer.rights":{en:`© 2026 Faith Driven Singapore · Built by volunteers · Part of Faith Driven Movements.`,zh:`© 2026 Faith Driven Singapore · 由义工建立 · 隶属 Faith Driven Movements。`,ms:`© 2026 Faith Driven Singapore · Dibina oleh sukarelawan · Sebahagian daripada Faith Driven Movements.`,ta:`© 2026 Faith Driven Singapore · தன்னார்வலர்களால் உருவாக்கப்பட்டது · Faith Driven Movements-இன் பகுதி.`},
+"faq.eyebrow":{en:`Good to know`,zh:`了解更多`,ms:`Baik untuk diketahui`,ta:`தெரிந்துகொள்ள நல்லது`},
+"faq.headline":{en:`Common questions.`,zh:`常见问题。`,ms:`Soalan lazim.`,ta:`பொதுவான கேள்விகள்.`},
+"faq.q1":{en:`What is Faith Driven Singapore?`,zh:`Faith Driven Singapore 是什么？`,ms:`Apakah itu Faith Driven Singapore?`,ta:`Faith Driven Singapore என்றால் என்ன?`},
+"faq.a1":{en:`We're the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders who gather to worship, learn, and grow together. It's free to be part of.`,zh:`我们是全球 Faith Driven Entrepreneur 运动的新加坡本地分会——一个不断成长的基督徒创业者与企业建立者社群，一同敬拜、学习、成长。参与完全免费。`,ms:`Kami ialah cabang tempatan Singapura bagi gerakan global Faith Driven Entrepreneur — komuniti pengasas dan pembina perniagaan pengikut Kristus yang sentiasa berkembang, berkumpul untuk beribadah, belajar dan berkembang bersama. Penyertaan adalah percuma.`,ta:`நாங்கள் உலகளாவிய Faith Driven Entrepreneur இயக்கத்தின் சிங்கப்பூர் உள்ளூர் அமைப்பு — வழிபடவும், கற்கவும், ஒன்றாக வளரவும் கூடும் கிறிஸ்துவைப் பின்பற்றும் நிறுவனர்கள் மற்றும் தொழில் கட்டமைப்பாளர்களின் வளர்ந்துவரும் சமூகம். இணைவது இலவசம்.`},
+"faq.q2":{en:`Who is it for — can I join?`,zh:`适合谁参加？我可以加入吗？`,ms:`Untuk siapa — bolehkah saya sertai?`,ta:`இது யாருக்கானது — நான் இணையலாமா?`},
+"faq.a2":{en:`It's for Christ-following entrepreneurs, founders, and builders in Singapore — whether you're just starting out or scaling up. Everyone is welcome, and you don't need to come with a group.`,zh:`适合新加坡的基督徒创业者、创办人与建立者——无论你是刚起步还是正在扩张。欢迎每一个人，你也无需结伴而来。`,ms:`Ia untuk usahawan, pengasas dan pembina pengikut Kristus di Singapura — sama ada anda baru bermula atau sedang berkembang. Semua orang dialu-alukan, dan anda tidak perlu datang berkumpulan.`,ta:`இது சிங்கப்பூரில் உள்ள கிறிஸ்துவைப் பின்பற்றும் தொழில்முனைவோர், நிறுவனர்கள் மற்றும் கட்டமைப்பாளர்களுக்கானது — நீங்கள் தொடங்குபவராக இருந்தாலும் விரிவாக்குபவராக இருந்தாலும். அனைவரும் வரவேற்கப்படுகிறார்கள், குழுவாக வர வேண்டிய அவசியமில்லை.`},
+"faq.q3":{en:`How much does it cost?`,zh:`参加需要费用吗？`,ms:`Berapakah kosnya?`,ta:`இதற்கு எவ்வளவு செலவாகும்?`},
+"faq.a3":{en:`Nothing. No cost, no catch. Our gatherings and Foundations Groups are free — the community is sustained by volunteers and monthly partners.`,zh:`完全免费，绝无附加条件。我们的聚会与 Foundations 小组均免费——社群由义工与每月同工支持。`,ms:`Tiada apa-apa. Tanpa kos, tanpa syarat. Perjumpaan dan Kumpulan Foundations kami adalah percuma — komuniti ini disokong oleh sukarelawan dan rakan bulanan.`,ta:`எதுவுமில்லை. கட்டணமில்லை, நிபந்தனையில்லை. எங்கள் கூட்டங்களும் Foundations குழுக்களும் இலவசம் — இந்த சமூகம் தன்னார்வலர்கள் மற்றும் மாதாந்திர கூட்டாளர்களால் நடத்தப்படுகிறது.`},
+"faq.q4":{en:`What happens at a gathering?`,zh:`聚会上会做些什么？`,ms:`Apa yang berlaku di perjumpaan?`,ta:`ஒரு கூட்டத்தில் என்ன நடக்கும்?`},
+"faq.a4":{en:`Worship, a founder's story, and honest conversation with people who understand the journey. We meet monthly across Singapore, both online and in person.`,zh:`敬拜、一位创业者的故事，以及与懂你旅程的人真诚交流。我们每月在新加坡各地聚会，线上与线下皆有。`,ms:`Ibadah, kisah seorang pengasas, dan perbualan jujur dengan mereka yang memahami perjalanan ini. Kami berjumpa setiap bulan di seluruh Singapura, dalam talian dan bersemuka.`,ta:`வழிபாடு, ஒரு நிறுவனரின் கதை, மற்றும் பயணத்தைப் புரிந்துகொள்பவர்களுடன் நேர்மையான உரையாடல். நாங்கள் மாதந்தோறும் சிங்கப்பூர் முழுவதும் இணையத்திலும் நேரிலும் சந்திக்கிறோம்.`},
+"faq.q5":{en:`What is a Foundations Group?`,zh:`什么是 Foundations 小组？`,ms:`Apakah Kumpulan Foundations?`,ta:`Foundations குழு என்றால் என்ன?`},
+"faq.a5":{en:`An 8-week journey with 10–15 entrepreneurs through the Marks of a Faith Driven Entrepreneur, using the video series featuring J.D. Greear and Henry Kaestner. You can join online or in person.`,zh:`为期八周、由 10 至 15 位创业者一同经历「信仰驱动创业者的标志」的旅程，采用 J.D. Greear 与 Henry Kaestner 主讲的视频系列。可线上或线下参加。`,ms:`Perjalanan lapan minggu bersama 10–15 usahawan menerusi Marks of a Faith Driven Entrepreneur, menggunakan siri video bersama J.D. Greear dan Henry Kaestner. Anda boleh sertai dalam talian atau bersemuka.`,ta:`J.D. Greear மற்றும் Henry Kaestner இடம்பெறும் வீடியோ தொடரைப் பயன்படுத்தி, 10–15 தொழில்முனைவோருடன் 'Marks of a Faith Driven Entrepreneur' வழியாக எட்டு வார பயணம். இணையத்திலோ நேரிலோ இணையலாம்.`},
+"faq.q6":{en:`How do I get started?`,zh:`我该如何开始？`,ms:`Bagaimana saya boleh bermula?`,ta:`நான் எப்படி தொடங்குவது?`},
+"faq.a6":{en:`Message us on WhatsApp, join our WhatsApp community group, register with Faith Driven Entrepreneur, or simply come to the next gathering — every link you need is on this page.`,zh:`在 WhatsApp 上联系我们、加入我们的 WhatsApp 社群、在 Faith Driven Entrepreneur 注册，或直接来参加下一场聚会——你需要的所有链接都在本页面。`,ms:`Hantar mesej kepada kami di WhatsApp, sertai kumpulan komuniti WhatsApp kami, daftar dengan Faith Driven Entrepreneur, atau hadir sahaja ke perjumpaan seterusnya — setiap pautan yang anda perlukan ada di halaman ini.`,ta:`WhatsApp-இல் எங்களுக்கு செய்தி அனுப்புங்கள், எங்கள் WhatsApp சமூகக் குழுவில் இணையுங்கள், Faith Driven Entrepreneur-இல் பதிவு செய்யுங்கள், அல்லது அடுத்த கூட்டத்திற்கு வாருங்கள் — உங்களுக்குத் தேவையான ஒவ்வொரு இணைப்பும் இந்தப் பக்கத்தில் உள்ளது.`},
 };
 
 /* ================= language switching ================= */
