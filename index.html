@@ -18,7 +18,8 @@
      If the domain ever changes, update https://faithdriven.sg here
      AND in sitemap.xml, robots.txt and llms.txt. Keep favicon*,
      apple-touch-icon.png, og-image.png, site.webmanifest, robots.txt,
-     sitemap.xml and llms.txt in the same web-root folder as this file.
+     sitemap.xml, llms.txt, fde2026-banner.png and fde2026-chevrons.png
+     (watch-party hero imagery) in the same web-root folder as this file.
      ============================================================ -->
 
 <title>Faith Driven Singapore — You're not building alone</title>
@@ -182,7 +183,7 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
 .hero{position:relative;min-height:clamp(600px,92vh,940px);display:flex;align-items:center;overflow:hidden;background:var(--black)}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 28%;z-index:0}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.62) 0%,rgba(11,11,11,.72) 45%,rgba(11,11,11,.97) 100%),linear-gradient(96deg,rgba(11,11,11,.9) 8%,rgba(11,11,11,.35) 62%,rgba(11,11,11,.15) 100%)}
-.hero .container{position:relative;z-index:2;padding-top:4rem;padding-bottom:4rem}
+.hero .container{position:relative;z-index:2;padding-top:4rem;padding-bottom:6.5rem}
 .hero-in{max-width:830px}
 .hero h1{margin:.2rem 0 1.6rem}
 .hero .lede{max-width:52ch;color:#e9e4df}
@@ -190,6 +191,13 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
 .hero-meta{display:flex;gap:2rem;margin-top:3rem;flex-wrap:wrap;align-items:center}
 .hero-meta .hm{display:flex;align-items:center;gap:.6rem;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--grey)}
 .hero-meta .dot{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;box-shadow:0 0 0 4px rgba(224,97,47,.18)}
+/* watch-party hero */
+.hero-bg.wp{background:radial-gradient(56% 72% at 82% 26%,rgba(224,97,47,.18),transparent 62%),radial-gradient(42% 58% at 68% 78%,rgba(190,156,96,.12),transparent 66%),var(--true-black)}
+.hero-bg.wp::before{content:"";position:absolute;inset:0;background:url('fde2026-chevrons.png') no-repeat right -3rem center;background-size:min(54vw,720px) auto;opacity:.15}
+.hero-bg.wp::after{background:linear-gradient(180deg,rgba(11,11,11,.05) 0%,rgba(11,11,11,.3) 55%,rgba(11,11,11,.94) 100%)}
+.hero-banner{display:block;margin-top:2.9rem;border-radius:16px;overflow:hidden;border:1px solid var(--line-dark);background:#000;max-width:830px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.hero-banner:hover{transform:translateY(-3px);border-color:rgba(224,97,47,.6);box-shadow:0 18px 44px -22px rgba(224,97,47,.45)}
+.hero-banner img{width:100%;height:auto;display:block}
 .scrolldown{position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--grey);font-family:var(--label);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem}
 .scrolldown .chevron{width:14px;height:20px;transform:rotate(90deg);color:var(--gold);animation:bob 1.9s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:rotate(90deg) translateX(0)}50%{transform:rotate(90deg) translateX(5px)}}
@@ -374,6 +382,7 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
 @media (max-width:560px){
   :root{--radius:22px}
   .hero{min-height:88vh}
+  .hero-banner{margin-top:2rem;border-radius:12px}
   .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn{justify-content:center}
   .hero-meta{gap:1rem 1.4rem;margin-top:2.2rem}
@@ -457,6 +466,30 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
       "description": "Faith Driven Singapore is the local Singapore chapter of the global Faith Driven Entrepreneur movement — a growing community of Christ-following founders and business builders. Monthly gatherings, online and in person. No cost. No catch."
     },
     {
+      "@type": "Event",
+      "@id": "https://faithdriven.sg/#watchparty2026",
+      "name": "Faith Driven Entrepreneur 2026 Conference Watch Party — Singapore",
+      "description": "An intimate 2-hour watch party of the global Faith Driven Entrepreneur 2026 Conference, hosted by Faith Driven Singapore — battle-tested entrepreneurs, one room, one evening.",
+      "startDate": "2026-09-23T18:00:00+08:00",
+      "endDate": "2026-09-23T20:00:00+08:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://faithdriven.sg/fde2026-banner.png",
+      "location": {
+        "@type": "Place",
+        "name": "105 Sunset Way",
+        "address": { "@type": "PostalAddress", "streetAddress": "105 Sunset Way", "postalCode": "597137", "addressCountry": "SG" }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "35.00",
+        "priceCurrency": "SGD",
+        "url": "https://faithdrivenmovements.swoogo.com/HsiaoSingapore2026",
+        "availability": "https://schema.org/InStock"
+      },
+      "organizer": { "@id": "https://faithdriven.sg/#organization" }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://faithdriven.sg/#faq",
       "inLanguage": "en",
@@ -524,23 +557,26 @@ html:lang(zh) .display em,html:lang(ta) .display em{font-style:normal}
   </div>
 </div>
 
-<!-- HERO -->
-<section class="hero" aria-label="Intro">
-  <div class="hero-bg" style="background-image:url('https://i.ytimg.com/vi/6a5W5w2hQ54/maxresdefault.jpg')"></div>
+<!-- HERO · FDE 2026 Conference Watch Party -->
+<section class="hero" aria-label="FDE 2026 Conference Watch Party — Singapore">
+  <div class="hero-bg wp" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-in">
-      <span class="eyebrow">Faith Driven Entrepreneur · Singapore</span>
-      <h1 class="display display-xl" data-i18n="hero.headline">You weren't meant to build <em>alone</em>.</h1>
-      <p class="lede" data-i18n="hero.sub">We're the Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders and builders. Online and in person. No cost. No catch.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">FDE Conference 2026 · Singapore Watch Party</span>
+      <h1 class="display display-xl" data-i18n="hero.headline">Build for <em>more</em>.</h1>
+      <p class="lede" data-i18n="hero.sub">The global Faith Driven Entrepreneur Conference lands in Singapore. Two hours with battle-tested founders who've faced the risk, rejection and weight you're carrying right now — watched together, in one room.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg" href="https://share.somin.ai/event-fde" target="_blank" rel="noopener" data-i18n="hero.cta1">Join a gathering</a>
+        <a class="btn btn-primary btn-lg" href="https://faithdrivenmovements.swoogo.com/HsiaoSingapore2026" target="_blank" rel="noopener" data-i18n="hero.cta1">Save my seat · $35</a>
         <a class="btn btn-outline btn-lg" href="https://chat.whatsapp.com/EJtCAix4JwJDM1nmpd4XhM" target="_blank" rel="noopener" data-i18n="hero.cta2">Join the WhatsApp community</a>
       </div>
       <div class="hero-meta">
-        <span class="hm"><span class="dot"></span><span data-i18n="hero.m1">Monthly gatherings</span></span>
-        <span class="hm"><span class="dot"></span><span data-i18n="hero.m2">Online &amp; in person</span></span>
-        <span class="hm"><span class="dot"></span><span data-i18n="hero.m3">No cost. No catch.</span></span>
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m1">Wed 23 Sep 2026 · 6–8 PM</span></span>
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m2">105 Sunset Way, Singapore</span></span>
+        <span class="hm"><span class="dot"></span><span data-i18n="hero.m3">An intimate 2-hour experience</span></span>
       </div>
+      <a class="hero-banner" href="https://faithdrivenmovements.swoogo.com/HsiaoSingapore2026" target="_blank" rel="noopener" aria-label="Register for the FDE 2026 Conference Watch Party in Singapore">
+        <img src="fde2026-banner.png" alt="2026 Faith Driven Entrepreneur Conference — Build for More" width="1660" height="437" fetchpriority="high">
+      </a>
     </div>
   </div>
   <div class="scrolldown" aria-hidden="true">
@@ -915,13 +951,14 @@ const I18N = {
 "nav.join":{en:`Join`,zh:`加入`,ms:`Sertai`,ta:`இணைக`},
 "nav.getintouch":{en:`Get in touch`,zh:`联系我们`,ms:`Hubungi kami`,ta:`தொடர்பு கொள்ள`},
 
-"hero.headline":{en:`You weren't meant to build <em>alone</em>.`,zh:`你，不该<em>独自</em>创业。`,ms:`Anda tidak dicipta untuk membina <em>bersendirian</em>.`,ta:`நீங்கள் <em>தனியாக</em> கட்டமைக்க வேண்டியவர் அல்ல.`},
-"hero.sub":{en:`We're the Singapore chapter of the global Faith Driven movement — a growing community of Christ-following founders and builders. Online and in person. No cost. No catch.`,zh:`我们是全球 Faith Driven 运动的新加坡分会——一个不断成长的基督徒创业者社群。线上与线下聚会，免费参与，绝无附加条件。`,ms:`Kami ialah cabang Singapura bagi gerakan global Faith Driven — komuniti pengasas dan pembina pengikut Kristus yang sentiasa berkembang. Dalam talian dan bersemuka. Tanpa kos. Tanpa syarat.`,ta:`நாங்கள் உலகளாவிய Faith Driven இயக்கத்தின் சிங்கப்பூர் அமைப்பு — கிறிஸ்துவைப் பின்பற்றும் நிறுவனர்களின் வளர்ந்துவரும் சமூகம். இணையத்திலும் நேரிலும். கட்டணமில்லை. நிபந்தனையில்லை.`},
-"hero.cta1":{en:`Join a gathering`,zh:`参加聚会`,ms:`Sertai perjumpaan`,ta:`கூட்டத்தில் இணையுங்கள்`},
+"hero.eyebrow":{en:`FDE Conference 2026 · Singapore Watch Party`,zh:`FDE 2026 全球大会 · 新加坡观影会`,ms:`Persidangan FDE 2026 · Watch Party Singapura`,ta:`FDE 2026 மாநாடு · சிங்கப்பூர் Watch Party`},
+"hero.headline":{en:`Build for <em>more</em>.`,zh:`为<em>更多</em>而建。`,ms:`Bina untuk <em>lebih</em>.`,ta:`<em>மேலானதற்காக</em> கட்டுங்கள்.`},
+"hero.sub":{en:`The global Faith Driven Entrepreneur Conference lands in Singapore. Two hours with battle-tested founders who've faced the risk, rejection and weight you're carrying right now — watched together, in one room.`,zh:`全球 Faith Driven Entrepreneur 大会登陆新加坡。与身经百战的创业者共度两小时——他们曾面对你此刻正承受的风险、拒绝与重担。同在一个空间，一起观看。`,ms:`Persidangan global Faith Driven Entrepreneur tiba di Singapura. Dua jam bersama pengasas berpengalaman yang pernah menghadapi risiko, penolakan dan beban yang anda pikul sekarang — ditonton bersama, dalam satu ruang.`,ta:`உலகளாவிய Faith Driven Entrepreneur மாநாடு சிங்கப்பூருக்கு வருகிறது. நீங்கள் இப்போது சுமக்கும் ஆபத்து, நிராகரிப்பு மற்றும் பாரத்தை எதிர்கொண்ட அனுபவமிக்க நிறுவனர்களுடன் இரண்டு மணி நேரம் — ஒரே அரங்கில், ஒன்றாகப் பார்க்கலாம்.`},
+"hero.cta1":{en:`Save my seat · $35`,zh:`立即报名 · $35`,ms:`Tempah tempat saya · $35`,ta:`என் இடத்தைப் பதிவு செய்க · $35`},
 "hero.cta2":{en:`Join the WhatsApp community`,zh:`加入 WhatsApp 社群`,ms:`Sertai komuniti WhatsApp`,ta:`WhatsApp சமூகத்தில் இணையுங்கள்`},
-"hero.m1":{en:`Monthly gatherings`,zh:`每月聚会`,ms:`Perjumpaan bulanan`,ta:`மாதாந்திர கூட்டங்கள்`},
-"hero.m2":{en:`Online & in person`,zh:`线上与线下`,ms:`Dalam talian & bersemuka`,ta:`இணையம் & நேரில்`},
-"hero.m3":{en:`No cost. No catch.`,zh:`免费，无附加条件`,ms:`Tanpa kos. Tanpa syarat.`,ta:`கட்டணமில்லை. நிபந்தனையில்லை.`},
+"hero.m1":{en:`Wed 23 Sep 2026 · 6–8 PM`,zh:`2026年9月23日（周三）· 晚上6–8点`,ms:`Rabu 23 Sep 2026 · 6–8 malam`,ta:`புதன் 23 செப் 2026 · மாலை 6–8`},
+"hero.m2":{en:`105 Sunset Way, Singapore`,zh:`新加坡 105 Sunset Way`,ms:`105 Sunset Way, Singapura`,ta:`105 Sunset Way, சிங்கப்பூர்`},
+"hero.m3":{en:`An intimate 2-hour experience`,zh:`亲密的两小时体验`,ms:`Pengalaman intim selama 2 jam`,ta:`நெருக்கமான 2 மணி நேர அனுபவம்`},
 "hero.scroll":{en:`Scroll`,zh:`向下滑动`,ms:`Skrol`,ta:`கீழே செல்க`},
 
 "movement.eyebrow":{en:`Why we gather`,zh:`我们为何聚集`,ms:`Mengapa kami berkumpul`,ta:`நாம் ஏன் கூடுகிறோம்`},
