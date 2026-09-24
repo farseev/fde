@@ -1,62 +1,60 @@
-FAITH DRIVEN SINGAPORE — DEPLOYMENT NOTES
-=========================================
+FAITH DRIVEN SINGAPORE — MULTI-PAGE SITE · DEPLOYMENT NOTES
+===========================================================
+Canonical domain: https://faithdriven.sg   (built 24 Sep 2026)
 
-Canonical domain: https://faithdriven.sg
+WHAT THIS IS
+------------
+A static, multi-page, multi-language site. 15 pages × 4 languages = 60 pages:
 
-WHAT TO UPLOAD
---------------
-Upload ALL of these files to your web ROOT (the same folder, so they sit at
-https://faithdriven.sg/<filename>):
+  /                       Home (refreshed)
+  /our-story/             Founding story (Aleks Farseev, Henry Kaestner, co-builders)
+  /voices/                Quotes & insights from 22 recorded Foundations sessions
+  /gatherings/            Every session 2024–2026: dates, venues, recordings
+  /articles/              Article hub + 10 articles:
+     what-is-faith-driven-entrepreneur/
+     faith-driven-singapore-founding-story/
+     aleks-farseev-prayer-for-ducks/          (Salt&Light story)
+     redemptive-marketing/                    (Forbes concept)
+     faith-driven-entrepreneurs-in-asia/
+     anthony-tan-grab-faith-driven-entrepreneur/
+     phil-chen-new-taipei-kings/
+     foundation-course-8-sessions-explained/
+     what-singapore-founders-say/
+     dont-worship-work-burnout-sabbath/
 
-  index.html              the website (single self-contained page)
-  favicon.svg             modern vector favicon
-  favicon-16x16.png       favicon (small)
-  favicon-32x32.png       favicon (standard)
-  favicon-192x192.png     Android / PWA icon
-  favicon-512x512.png     Android / PWA icon (large) + used as logo in structured data
-  apple-touch-icon.png    iOS home-screen icon (180x180)
-  og-image.png            social-share preview image (1200x630)
-  site.webmanifest        PWA manifest (installable app metadata)
-  robots.txt              crawler rules (search + AI/LLM crawlers welcomed)
-  sitemap.xml             XML sitemap
-  llms.txt                curated context for AI / LLM crawlers (GEO)
-  llms-full.txt           fuller content for AI / LLM grounding (GEO)
-  humans.txt              credits (optional but nice)
+  Languages: English at /, 中文 at /zh/, Bahasa Melayu at /ms/, தமிழ் at /ta/
+  (same page structure in every language, e.g. /zh/articles/redemptive-marketing/).
 
-Keep every file in the SAME folder as index.html. The favicon/manifest/og
-references use relative paths and will resolve automatically once uploaded.
+UPLOAD
+------
+Upload EVERYTHING in this folder to the web root, keeping the folder structure.
+The host must serve folder/index.html for folder/ URLs (Netlify, Vercel,
+Cloudflare Pages, GitHub Pages and most hosts do this by default).
+404.html is picked up automatically by Netlify / GitHub Pages / Cloudflare Pages.
+The old single-page index.html is replaced by the new home page.
 
-TURN ON HTTPS
--------------
-Your site currently shows "Not secure" on http://faithdriven.sg. Enable HTTPS
-(free & automatic on Netlify, Vercel, Cloudflare Pages, or via Let's Encrypt).
-HTTPS is what lets WhatsApp / Facebook / LinkedIn / X render the share preview,
-and search engines strongly prefer it.
+SEO / AEO / GEO BUILT IN
+------------------------
+- Unique title, description, keywords, canonical per page and per language
+- hreflang alternates (en, zh-Hans, ms, ta + x-default) on every page and in sitemap.xml
+- Real, crawlable HTML per language (no JS-only translation)
+- JSON-LD: Organization/NGO (with founder + founding date), Person, WebSite,
+  WebPage/AboutPage/CollectionPage, BlogPosting (with about/mentions entities,
+  translationOfWork links), BreadcrumbList, FAQPage (every page has an FAQ),
+  Speakable (the "Quick answer" boxes)
+- Answer-first "Quick answer" box at the top of every article (what AI answer
+  engines quote), question-style H2s, cited sources on every article
+- sitemap.xml (60 URLs with alternates), feed.xml (Atom), robots.txt welcoming
+  AI crawlers, llms.txt + llms-full.txt (full English text for LLM grounding)
+- Open Graph / Twitter cards, geo meta, favicons, manifest, Google Analytics (G-4MDEPHJHBF)
 
-IF YOU CHANGE DOMAINS
----------------------
-Search-and-replace https://faithdriven.sg in these files:
-  index.html, sitemap.xml, robots.txt, llms.txt, llms-full.txt
+AFTER DEPLOY
+------------
+1. Google Search Console + Bing Webmaster Tools: submit https://faithdriven.sg/sitemap.xml
+2. Rich Results Test on /articles/what-is-faith-driven-entrepreneur/ (FAQ, Article, Breadcrumb)
+3. Request indexing for / , /zh/ , /ms/ , /ta/ and /articles/
 
-AFTER DEPLOY — TELL SEARCH ENGINES
-----------------------------------
-1. Google Search Console (search.google.com/search-console): add the property,
-   then submit https://faithdriven.sg/sitemap.xml under Sitemaps.
-2. Bing Webmaster Tools (bing.com/webmasters): add the site and submit the same
-   sitemap. (Bing also powers ChatGPT/Copilot search results.)
-3. Test the share preview at opengraph.xyz or the Facebook Sharing Debugger.
-4. Test structured data at search.google.com/test/rich-results (you should see
-   Organization and FAQ).
-
-WHAT'S ALREADY DONE FOR SEO / GEO
----------------------------------
-- Title, meta description, keywords, author, canonical URL
-- Open Graph + Twitter Card tags with a branded 1200x630 preview image
-- Geo meta tags (region SG)
-- Favicon set + web manifest (installable)
-- JSON-LD structured data: Organization/NGO, WebSite, WebPage, FAQPage
-- A crawlable, multilingual FAQ section (great for Google FAQ results and for
-  being quoted by AI assistants)
-- robots.txt that explicitly ALLOWS AI crawlers (GPTBot, ClaudeBot,
-  PerplexityBot, Google-Extended, Applebot-Extended, CCBot, and more)
-- llms.txt and llms-full.txt so AI assistants can understand and cite the site
+TO EDIT
+-------
+Source + generator live in the companion "faithdriven-site-source" folder:
+content/<lang>/(pages|articles)/*.html, strings.py, build.py → `python3 build.py prod`.

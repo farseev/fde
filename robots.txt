@@ -51,3 +51,5 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://faithdriven.sg/sitemap.xml
+
+# LLM context: https://faithdriven.sg/llms.txt · https://faithdriven.sg/llms-full.txt
