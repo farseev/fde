@@ -1,0 +1,89 @@
+<!-- Insert into https://faithdriven.sg/sitemap.xml inside <urlset>. English only. -->
+  <url>
+    <loc>https://faithdriven.sg/guide/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-1-our-call-to-create.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-1-our-call-to-create.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-1-our-call-to-create.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-2-god-owns-my-business.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-2-god-owns-my-business.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-2-god-owns-my-business.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-3-dont-worship-work.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-3-dont-worship-work.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-3-dont-worship-work.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-4-excellence-matters.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-4-excellence-matters.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-4-excellence-matters.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-5-faithful-vs-willful.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-5-faithful-vs-willful.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-5-faithful-vs-willful.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-6-ministry-in-word.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-6-ministry-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-6-ministry-in-word.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-7-ministry-in-deed.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-7-ministry-in-deed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-7-ministry-in-deed.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/session-8-global-movement.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/session-8-global-movement.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/session-8-global-movement.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/people.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/people.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/people.html"/>
+  </url>
+  <url>
+    <loc>https://faithdriven.sg/guide/data.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://faithdriven.sg/guide/data.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://faithdriven.sg/guide/data.html"/>
+  </url>
