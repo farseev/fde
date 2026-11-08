@@ -486,3 +486,6 @@ a.scard:hover{transform:translateY(-3px);border-color:var(--orange)}
 .hub-filter button{font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;color:#5a534d;border:1px solid var(--line-light);border-radius:999px;padding:.5rem .9rem;background:#fff}
 .hub-filter button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:#fff}
 .acard[hidden]{display:none}
+
+.tier.suggested{border-color:var(--orange);background:rgba(224,97,47,.09);box-shadow:0 0 0 1px var(--orange) inset}
+.give-why{font-size:.98rem;color:#fff;opacity:.85;margin-top:1rem;max-width:34rem}
