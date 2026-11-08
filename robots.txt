@@ -50,6 +50,7 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+# Sitemap index: sitemap-en.xml plus one sitemap per language (sitemap-<code>.xml)
 Sitemap: https://faithdriven.sg/sitemap.xml
 
 # LLM context: https://faithdriven.sg/llms.txt · https://faithdriven.sg/llms-full.txt

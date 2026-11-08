@@ -58,3 +58,29 @@ TO EDIT
 -------
 Source + generator live in the companion "faithdriven-site-source" folder:
 content/<lang>/(pages|articles)/*.html, strings.py, build.py → `python3 build.py prod`.
+
+LANGUAGES (tools/i18n.py, Nov 2026)
+-----------------------------------
+The English pages in this repo are now the template for every language (Python 3, standard library only):
+
+  python3 tools/i18n.py status                     coverage per language
+  python3 tools/i18n.py todo <code> [/path/ ...]   untranslated segments as  id<TAB>English
+  python3 tools/i18n.py merge <code> <file.tsv>    merge  id<TAB>translation  (keep <g1>…</g1> / <x1/>)
+  python3 tools/i18n.py build                      render languages, hreflang, switchers, sitemaps, llms.txt
+  python3 tools/check_site.py                      must end with "0 errors"
+
+- Translated: home, our-story, voices, gatherings, articles hub + 10 articles (15 pages).
+  English-only by design: /guide/ (facilitator guide, sessions, people, data — research documents with
+  coded transcripts), the root session-*/people/data copies (canonical -> /guide/), /thank-you-giving/, 404.
+- URLs: English at /, Simplified Chinese at /zh/, Malay /ms/, Tamil /ta/ (extra language, kept), and
+  /zh-hant/ /ja/ /ko/ /th/ /vi/ /id/ /hi/ /fil/ /es/ /fr/ /de/ /pt/ /ar/ (rtl) /ru/ with the same paths.
+- Translation memory: i18n/<code>.json; English segments: i18n/source.json; i18n/pages.json lists ids per page.
+  The existing zh/ms/ta pages were imported (tools/i18n_import_legacy.py, aligned with commit cc95725).
+- A page is rendered in a language only when 100% of its segments are translated; a language goes live
+  with its home page. Existing language pages that are not 100% (e.g. zh/ms/ta until the rewritten English
+  titles/descriptions are translated) are kept as they are; only their hreflang, og:locale, language
+  switchers and "Also available in" links are refreshed.
+- While only EN/zh/ms/ta are live the original pill switcher is kept unchanged; from the 5th language on,
+  the header and footer show a dropdown (details.langsw) and the mobile menu lists every language.
+  Clicks fire the GA4 event language_switch (track.js).
+- Sitemaps: sitemap.xml is an index of sitemap-en.xml (incl. the guide pages) and sitemap-<code>.xml.

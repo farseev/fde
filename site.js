@@ -1,6 +1,8 @@
 (function(){
 function store(l){try{localStorage.setItem('fds-lang',l)}catch(e){}}
 document.querySelectorAll('[data-setlang]').forEach(function(a){a.addEventListener('click',function(){store(a.getAttribute('data-setlang'))})});
+document.addEventListener('click',function(e){document.querySelectorAll('details.langsw[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.langsw[open]').forEach(function(d){d.removeAttribute('open');var s=d.querySelector('summary');if(s)s.focus()})});
 var hb=document.getElementById('hamburger'),mm=document.getElementById('mobileMenu');
 function setMenu(o){hb.classList.toggle('open',o);mm.classList.toggle('open',o);hb.setAttribute('aria-expanded',o?'true':'false');mm.setAttribute('aria-hidden',o?'false':'true');document.body.style.overflow=o?'hidden':''}
 if(hb&&mm){hb.addEventListener('click',function(){setMenu(!mm.classList.contains('open'))});mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mm.classList.contains('open'))setMenu(false)})}

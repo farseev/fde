@@ -7,18 +7,27 @@
      contact_click                WhatsApp or email to the team
    FUNNEL / OTHER: donate_view, donation_frequency_select (monthly | one_off),
      donation_amount_select, one_off_donation_enquiry, community_join (WhatsApp group),
-     video_play, social_click.
+     video_play, social_click, language_switch (header/footer/mobile language switcher or the
+     "Also available in" links; from_language, to_language, link_location).
    Nothing here sets cookies. */
 (function () {
   'use strict';
   function ev(n, p) { try { if (window.gtag) window.gtag('event', n, p || {}); } catch (e) {} }
   window.fdeTrack = ev;
-  var lang = (document.documentElement.lang || 'en').slice(0, 2);
+  var hl = document.documentElement.lang || 'en';
+  var lang = /^zh-hant/i.test(hl) ? 'zh-hant' : hl.split('-')[0].toLowerCase();
   function amt(h) { var m = /fde-(\d+)/.exec(h || ''); return m ? +m[1] : null; }
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest && e.target.closest('a'); if (!a) return;
     var h = a.getAttribute('href') || '';
     var where = a.closest('#give') ? 'give' : (a.closest('footer') ? 'footer' : (a.closest('header,nav') ? 'header' : 'page'));
+    if (a.hasAttribute('data-setlang')) {
+      var to = (a.getAttribute('hreflang') || a.getAttribute('data-setlang') || '').toLowerCase();
+      if (to !== hl.toLowerCase() && a.getAttribute('aria-current') !== 'true') {
+        ev('language_switch', { from_language: lang, to_language: to === 'zh-hans' ? 'zh' : to, link_location: a.closest('.alsoin') ? 'also_in' : (a.closest('#mobileMenu') ? 'mobile_menu' : where) });
+      }
+      return;
+    }
     var n = amt(h);
     if (n) {
       if (a.classList.contains('tier')) ev('donation_amount_select', { amount: n, frequency: 'monthly', currency: 'SGD' });
